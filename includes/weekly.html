@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link href='scripts/fullcalendar.css' rel='stylesheet' type='text/css' />
+    <link href="scripts/cs10style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- This uses the "FullCalendar" JS tool
+          http://arshaw.com/fullcalendar/
+          The CS10 scripts have been slightly modified for CS10 use -->
+    <h3>Click on any event to see the building location on a map.</h3>
+
+    <div id="weekly"></div>
+
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+    <script type='text/javascript' src='scripts/fullcalendar.js'></script>
+    <script type='text/javascript' src='scripts/gcal.js'></script>
+    <script type="text/javascript" language="Javascript">
+      // Review session dates
+      var quest = daysUntil(new Date(2014, 1, 16)),
+          mt    = daysUntil(new Date(2014, 2, 16)),
+          fin   = daysUntil(new Date(2014, 4, 11))
+
+      function daysUntil(day) {
+        var MS_DAY = 1000*60*60*24
+        return Math.floor((new Date() - day) / MS_DAY)
+      }
+
+      function inRange(num) { return num >= -7 && num < 1 }
+
+      // Show weeks when we are close to at least one session.
+      var wkends = (inRange(quest) || inRange(mt) || inRange(fin))
+
+      $(document).ready(function() {
+          $('#weekly').fullCalendar({
+            allDaySlot: false,
+            slotMinutes: 60,
+            weekends: wkends,
+            defaultView: 'agendaWeek',
+            minTime: 8,
+            maxTime: 22,
+            contentHeight: 750,
+            eventSources: [
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk%40group.calendar.google.com/public/basic',
+                  className: 'lecture' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_d358eocqj23pak3atie23vk35o%40group.calendar.google.com/public/basic',
+                  className: 'lab' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0%40group.calendar.google.com/public/basic',
+                  className: 'oh' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_1g3duo9lb53vu09orjictriud4%40group.calendar.google.com/public/basic',
+                  className: 'disc' },
+              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_21jprgg43p44oq62g94agbumv8%40group.calendar.google.com/public/basic',
+                  className: 'disc', // FIX FOR BUG WITH LAST 2 DISCUSSIONS
+                  currentTimezone: 'America/Chicago' }
+            ]
+          })
+      });
+    </script>
+  </body>
+</html>
