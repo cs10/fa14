@@ -22,8 +22,16 @@ function updateCalendar() {
         highlight = since[today.getDay()],
         weeks = Math.floor(((today - start) / MS_DAY) / 7), // Weeks SINCE start
         rows = document.getElementsByClassName("cal"),
-        cells = rows[weeks + 1].cells // +1 is because row 0 is header
+        temp = rows[weeks + 1], // +1 is because row 0 is header
+        cells;
 
+    // Date is out of range of calendar
+    if (typeof temp === 'undefined') {
+        return;
+    }
+    
+    cells = temp.cells;
+    
     if (today.getDay() === 3) { // HIGHLIGHT LAB ON WEDS BASED ON TIME OF DAY
         var n = (today.getHours() < 12) ? 4 : 6
         highlight.push(n)
