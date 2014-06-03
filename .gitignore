@@ -1,0 +1,5 @@
+.DS_Store
+*~
+Lectures/*/*.pdf
+Lectures/*/*.pptx
+images
