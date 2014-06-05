@@ -26,3 +26,22 @@ lectures = {
       rq: 1
   },
 }
+
+/* DATA MODELS -- OPTIONAL DATA NOTED */
+reading = {
+    title: 'Name',
+    url: 'duh',
+    required: 'OPTIONAL - defaults true',
+    difficult: 'OPTIONAL - defaults false'
+}
+
+lab = {
+    title: '',
+    url: '',
+    RQ: 1 // OPTIONAL -- INT
+}
+
+discussion = {
+    title: '',
+    files: false // OPTIONAL -- default false
+}
