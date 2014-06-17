@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>CS10 : BJC | Spring 2014 | UC Berkeley EECS</title>
+        <title>CS10 : BJC | Fall 2014 | UC Berkeley</title>
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <meta http-equiv="Pragma" content="no-cache">
         <meta name="description" content="CS10, The Beauty and Joy of Computing is an introductory computer science class designed for anyone and everyone." />
@@ -30,14 +30,16 @@
                       </map>
                   </td>
                   <td class="center">
-                    <h2 class="logo">CS10 : The Beauty and Joy of Computing</h2>
-                    <h2 class="logo">UC Berkeley EECS</h2>
-                    <h2 class="logo">Spring 2014</h2>
+                    <h2 class="logo">CS10</h2>
+                    <h2 class="logo">The Beauty and Joy of Computing</h2>
+                    <h2 class="logo">UC Berkeley</h2>
+                    <h2 class="logo">Fall 2014</h2>
                     <h2 class="logo">cs10.berkeley.edu</h2>
                   </td>
                   <td class="right" width="250">
+                      <!--FIXME image dimensions -->
                       <a href="http://bjc.berkeley.edu/">
-                          <img border="0" src="images/bjc186.png" alt="BJC">
+                          <img border="0" src="images/bjc186.png" alt="BJC logo">
                       </a>
                   </td>
               </tr>
@@ -61,48 +63,48 @@
               <br />(submissions)
             </div>
             <div class="ql">
+              <a href="https://plus.google.com/s/%23BJCnews">CS10 Syllabus</a>
+              <br />(answers to all your questions)
+            </div>
+            <div class="ql">
               <a href="https://plus.google.com/s/%23BJCnews">Google+ (#BJCnews)</a>
               <br />(computing in news)
             </div>
       </div>
       <div style="clear: both"></div>
 
-      <a name="overview"></a>
-      <h1>Overview</h1>
-      <!--#include file="includes/overview.html"-->
+      <div id="overview">
+          <h1>Overview</h1>
+      </div>
 
-      <h1>Calendar</h1>
-      <a name="calendar"></a>
-      <!--#include file="includes/calendar.html"-->
+      <div id="calendar">
+          <h1>Assignment Calendar</h1>
+      </div>
 
-      <a name="weekly"></a>
-      <h1>Weekly Schedule</h1>
-      <!--#include file="includes/weekly.html"-->
+      <div id="weekly">
+          <h1>Weekly Schedule</h1>
+      </div>
 
-      <a name="staff"></a>
-      <h1>Staff</h1>
-      <!--#include file="includes/staff.html"-->
+      <div id="staff">
+          <h1>staff</h1>
+      </div>
 
-      <a name="grades"></a>
-      <h1>Grading</h1>
-      <!--#include file="includes/grading.html"-->
+      <div id="grading">
+          <h1>Grading</h1>
+      </div>
+      
+      <div id="resources">
+          <h1>Resources</h1>
 
-      <a name="resources"></a>
-      <h1>Resources</h1>
-
-      <p>
         <ul class="lambda">
-          <li><a href="http://codepath.co/">Codepath</a></li>
-          <li><a href="http://scratch.mit.edu/forums/">Scratch Forums</a></li>
           <li><a href="http://www.bitsbook.com/">Blown to Bits</a></li>
           <li><a href="http://www.debuggingrules.com/">Debugging Rules!</a></li>
           <li><a href="http://www.berkeley.edu">UC Berkeley</a></li>
           <li><a href="http://coe.berkeley.edu/">College of Engineering</a> </li>
           <li><a href="http://www.eecs.berkeley.edu/">Department of Electrical Engineering &amp; Computer Sciences</a></li>
-          <li><a href="http://webcast.berkeley.edu/course_details_new.php?seriesid=2010-D-26250&amp;semesterid=2010-D">Webcast archive of 2010Fa lectures</a></li>
           <li><a href="../fa13/lab/solutions.html"> Solutions to Lab Exercises</a></li>
         </ul>
-      </p>
+      </div>
 
       <hr />
       <div class="center">
@@ -114,21 +116,20 @@
               <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
           </a>
       </div>
+      <!--
+      <script type="text/javascript" src="scripts/cs10.js"></script>
+      <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+      <script type='text/javascript' src='scripts/fullcalendar.js'></script>
+      <script type='text/javascript' src='scripts/gcal.js'></script>
+      -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-47210910-1', 'berkeley.edu');
+        ga('send', 'pageview');
+      </script>
     </body>
-    <!--
-    <script type="text/javascript" src="scripts/cs10.js"></script>
-    <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
-    <script type='text/javascript' src='scripts/fullcalendar.js'></script>
-    <script type='text/javascript' src='scripts/gcal.js'></script>
-    -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-47210910-1', 'berkeley.edu');
-      ga('send', 'pageview');
-    </script>
-
 </html>
