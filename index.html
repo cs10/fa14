@@ -54,17 +54,14 @@
               <br />(our software)
             </div>
             <div class="ql">
-              <a href="https://piazza.com/">Piazza</a>
-              <br />(our Q&amp;A)
+                <!-- UPDATE EACH SEMESTER -->
+                <a href="https://piazza.com/">Piazza</a>
+                <br />(our Q&amp;A)
             </div>
             <div class="ql">
                 <!-- UPDATE EACH SEMESTER -->
               <a href="https://bcourses.berkeley.edu/courses/1182135">bCourses</a>
               <br />(submissions)
-            </div>
-            <div class="ql">
-              <a href="https://plus.google.com/s/%23BJCnews">CS10 Syllabus</a>
-              <br />(answers to all your questions)
             </div>
             <div class="ql">
               <a href="https://plus.google.com/s/%23BJCnews">Google+ (#BJCnews)</a>
@@ -87,6 +84,42 @@
 
       <div id="staff">
           <h1>Staff</h1>
+
+          <h2>Instructor</h2>
+          <div id="instructors"></div>
+          <div style='clear: both;'></div>
+
+          <h2>Teaching Assistants</h2>
+          <div id="tas"></div>
+          <div style='clear: both;'></div>
+
+          <h2>Readers</h2>
+          <div id="readers"></div>
+          <div style='clear: both;'></div>
+
+          <h2>TAs-in-Training</h2>
+          <div id="tait"></div>
+          <div style='clear: both;'></div>
+
+          <h2>Lab Assistants</h2>
+          <div id="las"></div>
+          <div style='clear: both;'></div>
+
+          <h2>edX Course Development</h2>
+          <div id="edx"></div>
+          <div style='clear: both;'></div>
+
+          <h2>BJC Lab Development</h2>
+          <div id="labdev"></div>
+          <div style='clear: both;'></div>
+
+          <h2><span class='snap'>Snap!</span> Development</h2>
+          <div id="snap"></div>
+          <div style='clear: both;'></div>
+
+          <h2>BJC Project Leads</h2>
+          <div id="bjc"></div>
+          <div style='clear: both;'></div>
       </div>
 
       <div id="grading">
@@ -116,10 +149,32 @@
               <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
           </a>
       </div>
+      <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+      <script type="text/javascript">
+          function addContent(item) {
+              $.ajax({
+                  async: true,
+                  cache: true,
+                  dataType: 'html',
+                  url: 'includes/' + item + '.html',
+                  success: function(content, unused, notused) {
+                      $('#' + item).append(content)
+                  },
+                  error: function(a, b, c) {
+                      console.log('ERROR');
+                      console.log(a);
+                      console.log(b);
+                      console.log(c);
+                  }
+              });
+          };
+          addContent('overview');
+          addContent('calendar');
+          addContent('grading');
+      </script>
       <script type="text/javascript" src="scripts/cs10.js"></script>
-      <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
       <script type='text/javascript' src='scripts/fullcalendar.js'></script>
-      <script type='text/javascript' src='scripts/gcal.js'></script>
+      <!-- <script type='text/javascript' src='scripts/gcal.js'></script> -->
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

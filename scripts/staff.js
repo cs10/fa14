@@ -461,7 +461,6 @@ addLoadEvent(function() {
   buildGroup('las', 5)
   buildGroup('edx', 5)
   buildGroup('labdev', 5)
-  buildGroup('bb', 5)
   buildGroup('snap', 5)
   buildGroup('bjc', 5)
 })
