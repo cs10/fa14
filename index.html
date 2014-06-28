@@ -6,7 +6,45 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <meta name="description" content="CS10, The Beauty and Joy of Computing is an introductory computer science class designed for anyone and everyone." />
         <meta name="keywords" content="CS10, UC, Berkeley, CS, computer science, BJC, computing, education, Michael Ball" />
-        <link href="scripts/cs10style.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+        @font-face {
+            font-family: 'MyFontFamily';
+            src: url('myfont-webfont.eot?') format('eot'),
+                 url('myfont-webfont.woff') format('woff'),
+                 url('myfont-webfont.ttf')  format('truetype'),
+                 url('myfont-webfont.svg#svgFontName') format('svg');
+        }
+        body {
+            background-image: url('images/gobo_watermark.gif'); /* watermark */
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-attachment: fixed;
+            font-family: 'Helvetica', 'Helvetica Neue', Verdana, Arial, sans-serif;
+            font-size: .8em;
+            width: 90%;
+            margin: 2%;
+            padding: 0 .3em .3em .3em;
+        }
+        h1 {
+            display: block; /* #0F4D92 */
+            background: #0F4D92;
+            background: -moz-linear-gradient(top,  #0F4D92 0%, #2f6db2 50%, #0F4D92 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0F4D92), color-stop(50%,#2f6db2), color-stop(100%,#0F4D92)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #0F4D92 0%,#2f6db2 50%,#0F4D92 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #0F4D92 q%,#2f6db2 50%,#0F4D92 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #0F4D92 0%,#2f6db2 50%,#0F4D92 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #0F4D92 0%,#2f6db2 50%,#0F4D92 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0F4D92', endColorstr='#0F4D92',GradientType=0 ); /* IE6-9 */
+            border-radius: 2em;
+            box-shadow: 2px 3px 6px #606060;
+            padding: .2em .8em;
+            color: white;
+            font-size: 2.1em;
+            font-weight: 400;
+            text-shadow: 1px 1px 1px #222;
+            vertical-align: middle;
+        }
+        </style>
     </head>
 
     <body>
@@ -217,7 +255,8 @@
               <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
           </a>
       </div>
-      <script async type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+      <link href="scripts/cs10style.css" rel="stylesheet" type="text/css" />
+      <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
       <script async type="text/javascript">
           function addContent(item) {
               $.ajax({
@@ -242,7 +281,8 @@
       </script>
       <script async type="text/javascript" src="scripts/cs10.js"></script>
       <script async type='text/javascript' src='scripts/fullcalendar.js'></script>
-      <!-- <script type='text/javascript' src='scripts/gcal.js'></script> -->
+      <script type='text/javascript' src='scripts/gcal.js'></script>
+      <script type='text/javascript' src='scripts/staff.js'></script>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

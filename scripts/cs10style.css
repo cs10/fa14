@@ -1,6 +1,6 @@
 /* ALL PAGES CSS */
 body {
-    background-image: url('/~cs10/images/gobo_watermark.gif'); /* watermark */
+    background-image: url('images/gobo_watermark.gif'); /* watermark */
     background-repeat: no-repeat;
     background-position: bottom right;
     background-attachment: fixed;
