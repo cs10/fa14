@@ -12,27 +12,20 @@ labData = {
   },
 }
 
-lectures = {
-  1 : {
-      title: 'Welcome to Snap!',
-      link: '',
-      video: 'http://www.youtube.com/watch?v=Aub6BAxAT-c&amp;list=PLAE5AE3CD22628741&amp;index=1&amp;feature=plpp_video',
-      rq: 0
-  },
-  2 : {
-      title: 'Build Your Own Blocks',
-      link: '',
-      video: '',
-      rq: 1
-  },
-}
+lectures = [
+    {
+        title: '',
+        slides: 'url',
+        video: 'url',
+        style: 'optional classes to apply'
+    }
+]
 
 /* DATA MODELS -- OPTIONAL DATA NOTED */
 reading = {
     title: 'Name',
     url: 'duh',
-    required: 'OPTIONAL - defaults true',
-    difficult: 'OPTIONAL - defaults false'
+    type: 'required hard' // or whatver
 }
 
 lab = {
