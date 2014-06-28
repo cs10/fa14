@@ -558,32 +558,4 @@ table.fc-border-separate {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #fff;
-	opacity: .25;
-	filter: alpha(opacity=25);
-	}
-
-.fc .ui-draggable-dragging .fc-event-bg, /* TODO: something nicer like .fc-opacity */
-.fc-select-helper .fc-event-bg {
-	display: none\9; /* for IE6/7/8. nested opacity filters while dragging don't work */
-	}
-
-/* resizable */
-
-.fc-event-vert .ui-resizable-s {
-	bottom: 0        !important; /* importants override pre jquery ui 1.7 styles */
-	width: 100%      !important;
-	height: 8px      !important;
-	overflow: hidden !important;
-	line-height: 8px !important;
-	font-size: 11px  !important;
-	font-family: monospace;
-	text-align: center;
-	cursor: s-resize;
-	}
-
-.fc-agenda .ui-resizable-resizing { /* TODO: better selector */
-	_overflow: hidden;
-	}
-
-
+}
