@@ -56,41 +56,34 @@
     </head>
 
     <body>
-      <!-- Top Section and Title -->
-      <table class="top-table">
-          <tbody>
-              <tr class="white">
-                  <td class="left" width="250">
-                      <img width="250" border="0" align="bottom" height="244" src="images/snap_nav.gif" class="navbar" alt="Your Navigation Bar didn't load." title="Click me to navigate." usemap="#gobo">
-                      <div style="position:absolute;top:60px;left:220px;z-index:40;">
-                        <img src="images/blank.gif" name="speech" />
-                      </div>
-                      <map name="gobo">
-                          <area shape="rect" coords="0,70,110,97" alt="Overview" href="#overview" onmouseover="displaySpeech('speech', 'images/overview_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                          <area shape="rect" coords="0,97,76,124" alt="News" href="#news" onmouseover="displaySpeech('speech', 'images/news_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                          <area shape="rect" coords="0,124,105,151" alt="Calendar" href="#calendar" onmouseover="displaySpeech('speech', 'images/calendar_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                          <area shape="rect" coords="0,151,72,178" alt="Staff" href="#staff" onmouseover="displaySpeech('speech', 'images/staff_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                          <area shape="rect" coords="0,178,97,205" alt="Grades" href="#grades" onmouseover="displaySpeech('speech', 'images/grading_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                          <area shape="rect" coords="0,205,117,232" alt="Resources" href="#resources" onmouseover="displaySpeech('speech', 'images/resources_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                      </map>
-                  </td>
-                  <td class="center">
-                    <h2 class="logo">The Beauty and Joy of Computing</h2>
-                    <h2 class="logo">CS10 Fall 2014</h2>
-                  </td>
-                  <td class="right" width="250">
-                      <!--FIXME image dimensions -->
-                      <a href="http://bjc.berkeley.edu/">
-                          <img border="0" src="images/bjc186.png" alt="BJC logo">
-                      </a>
-                  </td>
-              </tr>
-          </tbody>
-      </table>
+        <div class="header">
+            <div class="left">
+                <img width="250" border="0" align="bottom" height="244" src="images/snap_nav.gif" class="navbar" alt="Your Navigation Bar didn't load." title="Click me to navigate." usemap="#gobo">
+                <div style="position:absolute;top:60px;left:220px;z-index:40;">
+                  <img src="images/blank.gif" name="speech" />
+                </div>
+                <map name="gobo">
+                    <area shape="rect" coords="0,70,110,97" alt="Overview" href="#overview" onmouseover="displaySpeech('speech', 'images/overview_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
+                    <area shape="rect" coords="0,97,76,124" alt="News" href="#news" onmouseover="displaySpeech('speech', 'images/news_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
+                    <area shape="rect" coords="0,124,105,151" alt="Calendar" href="#calendar" onmouseover="displaySpeech('speech', 'images/calendar_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
+                    <area shape="rect" coords="0,151,72,178" alt="Staff" href="#staff" onmouseover="displaySpeech('speech', 'images/staff_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
+                    <area shape="rect" coords="0,178,97,205" alt="Grades" href="#grades" onmouseover="displaySpeech('speech', 'images/grading_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
+                    <area shape="rect" coords="0,205,117,232" alt="Resources" href="#resources" onmouseover="displaySpeech('speech', 'images/resources_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
+                </map>
+            </div>
+            <div class="center">
+                <h2 class="logo">The Beauty and Joy of Computing</h2>
+                <h2 class="logo">CS10 Fall 2014</h2>
+            </div>
+            <div class="right">
+                <a href="http://bjc.berkeley.edu/">
+                    <img border="0" src="images/bjc186.png" alt="BJC logo">
+                </a>
+            </div>
+        </div>
 
-      <a name="quicklinks"></a>
-      <h1 class="ql">Quick Links</h1>
-      <div>
+        <h1 class="center" id="quicklinks">Quick Links</h1>
+        <div>
             <div class="ql">
               <a href="http://snap.berkeley.edu/run/">Snap!</a>
               <br />(our software)
@@ -103,31 +96,31 @@
             <div class="ql">
                 <!-- UPDATE EACH SEMESTER -->
               <a href="https://bcourses.berkeley.edu/courses/1182135">bCourses</a>
-              <br />(submissions)
+              <br />(assignment submissions)
             </div>
             <div class="ql">
-              <a href="https://plus.google.com/s/%23BJCnews">Google+ (#BJCnews)</a>
-              <br />(computing in news)
+              <a href="FIXME">Course Policies</a>
+              <br />(answers to many questions)
             </div>
-      </div>
-      <div style="clear: both"></div>
+        </div>
+        <div style="clear: both"></div>
 
-      <div id="overview">
-          <h1>Overview</h1>
-          <div class="wp-caption alignright" style="width:360px;align:right;float:right;margin:0px 0px 5px 5px">
-            <img width="350" align="middle" height="251" src="images/pairprogramming.jpg"
-              alt="Fall 2009 students work together using pair programming" />
-            <p class="wp-caption-text"> Fall 2009 students <a href="http://en.wikipedia.org/wiki/Pair_programming">
+        <div id="overview">
+            <h1>Overview</h1>
+            <div class="wp-caption alignright" style="width:360px;align:right;float:right;margin:0px 0px 5px 5px">
+                <img width="350" align="middle" height="251" src="images/pairprogramming.jpg"
+                alt="Fall 2009 students work together using pair programming" />
+                <p class="wp-caption-text"> Fall 2009 students <a href="http://en.wikipedia.org/wiki/Pair_programming">
                 pair programming</a> in Scratch. </p>
-          </div>
-          <div class="wp-caption alignright" style="width:334px;float:left;margin:0px 5px 0px 0px">
-            <img width="324" align="middle" height="216" src="images/AppleOrchardLab.jpg"
-              alt="Our new Mac lab" />
+            </div>
+            <div class="wp-caption alignright" style="width:334px;float:left;margin:0px 5px 0px 0px">
+                <img width="324" align="middle" height="216" src="images/AppleOrchardLab.jpg"
+                alt="Our new Mac lab" />
             <p class="wp-caption-text"> Our labs are held in the Apple Orchard, which
               is not only the newest lab on campus with the fastest machines, but also
               has the most natural light! </p>
           </div>
-          <p style="text-align:justify;">  <b>CS10</b>: <i>The Beauty and Joy of
+          <p style="text-align:justify;"><b>CS10</b>: <i>The Beauty and Joy of
               Computing</i>, is an exciting new course offered by the <a href="http://www.eecs.berkeley.edu/">
               UC Berkeley EECS Department</a>. Computing has changed the world in profound
             ways. It has opened up wonderful new ways for people to connect, design,
