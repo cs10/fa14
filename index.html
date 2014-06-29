@@ -29,6 +29,9 @@
         }
         .logo {
             font-family: 'BPreplay';
+            font-size: 2.25em;
+            margin: .1em;
+            text-align: center;
         }
 
         .header {
@@ -107,8 +110,8 @@
                 </map>
             </div>
             <div class="center">
-                <h2 class="logo">The Beauty &amp; Joy of Computing</h2>
                 <h2 class="logo">CS10 Fall 2014</h2>
+                <h2 class="logo">The Beauty &amp; Joy of Computing</h2>
             </div>
             <div class="right">
                 <a href="http://bjc.berkeley.edu/">
@@ -223,7 +226,7 @@
       <div id="weekly">
           <h1>Weekly Schedule</h1>
           <h3>Click on any event to see the building location on a map.</h3>
-          <div id="weekly"></div>
+          <div id="oh-cal"></div>
       </div>
 
       <div id="staff">
@@ -292,7 +295,10 @@
               <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
           </a>
       </div>
+      <link href="scripts/fullcalendar.css" rel="stylesheet" type="text/css" />
+
       <link href="scripts/cs10style.css" rel="stylesheet" type="text/css" />
+
       <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
       <script type="text/javascript">
           function addContent(item) {
@@ -327,13 +333,10 @@
       }
 
       function inRange(num) { return num >= -7 && num < 1 }
-
-
-
       $(document).ready(function() {
           // Show weeks when we are close to at least one session.
           var wkends = (inRange(quest) || inRange(midterm) || inRange(final));
-          $('#weekly').fullCalendar({
+          $('#oh-cal').fullCalendar({
             allDaySlot: false,
             slotMinutes: 60,
             weekends: wkends,
