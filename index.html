@@ -7,13 +7,16 @@
         <meta name="description" content="CS10, The Beauty and Joy of Computing is an introductory computer science class designed for anyone and everyone." />
         <meta name="keywords" content="CS10, UC, Berkeley, CS, computer science, BJC, computing, education, Michael Ball" />
         <style type="text/css">
+        /* FIXME -- Get VAGRounded to work. */
         @font-face {
-            font-family: 'MyFontFamily';
-            src: url('myfont-webfont.eot?') format('eot'),
-                 url('myfont-webfont.woff') format('woff'),
-                 url('myfont-webfont.ttf')  format('truetype'),
-                 url('myfont-webfont.svg#svgFontName') format('svg');
+            font-family: 'BPreplay';
+            src: url('fonts/BPreplayExtended.otf') format('opentype');
         }
+        /*
+        url('myfont-webfont.eot?') format('eot'),
+        url('myfont-webfont.woff') format('woff'),
+        url('myfont-webfont.ttf')  format('truetype'),
+        url('myfont-webfont.svg#svgFontName') format('svg') */
         body {
             background-image: url('images/gobo_watermark.gif'); /* watermark */
             background-repeat: no-repeat;
@@ -25,7 +28,12 @@
             margin: 2%;
             padding: 0 .3em .3em .3em;
         }
+        .logo {
+            font-family: 'BPreplay';
+        }
+        
         h1 {
+            font-family: 'BPreplay';
             display: block; /* #0F4D92 */
             background: #0F4D92;
             background: -moz-linear-gradient(top,  #0F4D92 0%, #2f6db2 50%, #0F4D92 100%); /* FF3.6+ */
@@ -266,12 +274,6 @@
                   url: 'includes/' + item + '.html',
                   success: function(content, unused, notused) {
                       $('#' + item).append(content)
-                  },
-                  error: function(a, b, c) {
-                      console.log('ERROR');
-                      console.log(a);
-                      console.log(b);
-                      console.log(c);
                   }
               });
           };
