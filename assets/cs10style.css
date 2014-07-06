@@ -2,7 +2,7 @@
  * FONTS
  *********************************/
 @font-face {
-  font-family: 'VAG Rounded Std Light';
+  font-family: 'VAG Rounded Light';
   src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot'); /* IE9 Compat Modes */
   src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff'), /* Modern Browsers */
@@ -17,15 +17,15 @@
        url('fonts/vagrounded/VAGRoundedStd-Bold-2.woff') format('woff'), /* Modern Browsers */
        url('fonts/vagrounded/VAGRoundedStd-Bold-2.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('fonts/vagrounded/VAGRoundedStd-Bold-2.svg#00ad8a10ebd59fb2cc3fe9f97989bf60') format('svg'); /* Legacy iOS */
-       
-  font-style:   normal;
-  font-weight:  700;
 }
 
-h1, .vagrounded, .vagrounded-light {
+h1, .vagrounded,  {
   font-family: 'VAG Rounded Bold';
 }
 
+h2, .vagrounded-light {
+  font-family: 'VAG Rounded Light';
+}
 /**********************************
  * END FONTS
  *********************************/
