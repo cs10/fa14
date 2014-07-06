@@ -7,16 +7,6 @@
         <meta name="description" content="CS10, The Beauty and Joy of Computing is an introductory computer science class designed for anyone and everyone." />
         <meta name="keywords" content="CS10, UC, Berkeley, CS, computer science, BJC, computing, education, Michael Ball" />
         <style type="text/css">
-        /* FIXME -- Get VAGRounded to work. */
-        @font-face {
-            font-family: 'BPreplay';
-            src: url('fonts/BPreplayExtended.otf') format('opentype');
-        }
-        /*
-        url('myfont-webfont.eot?') format('eot'),
-        url('myfont-webfont.woff') format('woff'),
-        url('myfont-webfont.ttf')  format('truetype'),
-        url('myfont-webfont.svg#svgFontName') format('svg') */
         body {
             background-image: url('images/gobo_watermark.gif'); /* watermark */
             background-repeat: no-repeat;
@@ -28,7 +18,6 @@
             padding: 0 .3em .3em .3em;
         }
         .logo {
-            font-family: 'BPreplay';
             font-size: 2.25em;
             margin: .1em;
             text-align: center;
@@ -72,7 +61,6 @@
             max-width: 30%;
         }
         h1 {
-            font-family: 'BPreplay';
             display: block;
             background: #0F4D92;
             background: -moz-linear-gradient(top,  #0F4D92 0%, #2f6db2 50%, #0F4D92 100%); /* FF3.6+ */
@@ -109,7 +97,7 @@
                     <area shape="rect" coords="0,205,117,232" alt="Resources" href="#resources" onmouseover="displaySpeech('speech', 'images/resources_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
                 </map>
             </div>
-            <div class="center">
+            <div class="center vagrounded-light">
                 <h2 class="logo">CS10 Fall 2014</h2>
                 <h2 class="logo">The Beauty &amp; Joy of Computing</h2>
             </div>
@@ -223,9 +211,9 @@
               <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
           </a>
       </div>
-      <link href="scripts/fullcalendar.css" rel="stylesheet" type="text/css" />
+      <link href="assets/fullcalendar.css" rel="stylesheet" type="text/css" />
 
-      <link href="scripts/cs10style.css" rel="stylesheet" type="text/css" />
+      <link href="assets/cs10style.css" rel="stylesheet" type="text/css" />
 
       <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
       <script type="text/javascript">
@@ -244,10 +232,10 @@
           addContent('calendar');
           addContent('grading');
       </script>
-      <script type="text/javascript" src="scripts/cs10.js"></script>
-      <script type='text/javascript' src='scripts/fullcalendar.js'></script>
-      <script type='text/javascript' src='scripts/gcal.js'></script>
-      <script type='text/javascript' src='scripts/staff.js'></script>
+      <script type="text/javascript" src="assets/cs10.js"></script>
+      <script type='text/javascript' src='assets/fullcalendar.js'></script>
+      <script type='text/javascript' src='assets/gcal.js'></script>
+      <script type='text/javascript' src='assets/staff.js'></script>
       <script>
 
       // Review session dates
