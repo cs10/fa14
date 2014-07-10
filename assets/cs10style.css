@@ -193,7 +193,7 @@ div.inner {
 
 /* Increase the default cell height */
 table.fc-agenda-slots > tbody > tr > td {
-    height: 4em;
+    height: 3.2rem;
 }
 /* Make today be highlighted in gold. */
 .fc-today {
@@ -203,7 +203,7 @@ table.fc-agenda-slots > tbody > tr > td {
 .fc-event-time, .fc-event-title,
 .fc-event-location, .fc-event-descrip {
     color: #222;
-    font-size: 1em;
+    font-size: 1rem;
     padding: 0 0 0 .5em;
 }
 .fc-agenda-axis {
