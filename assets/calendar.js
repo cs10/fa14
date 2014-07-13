@@ -28,7 +28,7 @@ discussion = {
     files: false // OPTIONAL -- default false
 }
 
-cs10 = {}
+cs10 = {};
 
 cs10.newLabObject = function(title, url, rq, video) {
     // FIXME -- better handle the URL via config
@@ -36,8 +36,14 @@ cs10.newLabObject = function(title, url, rq, video) {
     baseURL = '../labs/llab/html/topic.html?topic=';
     var labObj = {
         'title': title,
-        'url': baseURL + url
     };
+    if (title === null) {
+        // set title
+        return labObj;
+    }
+    if (url) {
+        labObj.url = baseURL + url;
+    }
     if (rq) {
         labObj.RQ = rq;
     }
@@ -47,9 +53,188 @@ cs10.newLabObject = function(title, url, rq, video) {
     return labObj;
 }
 
-var lab = cs10.newLabObject
+var lab = cs10.newLabObject,
+readings = function() {},
+lect = function() {},
+disc = function() {},
+hw = function() {};
 
-allLabs = [
+
+// ==================================================
+// ========     SCHEDULE ITEMS             ==========
+// ==================================================
+
+// Aug 25 - 29
+cs10.week1 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect(null),
+    lab(null),
+    disc('Welcome to CS10!'),
+    hw('HW0') ];
+
+// Sept 1 - 5
+cs10.week2 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
     lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Sept 8 - 12
+cs10.week3 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
     lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
-]
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Sept 15 - 19
+cs10.week4 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect(null),
+    lab(null),
+    disc('Welcome to CS10!'),
+    hw('HW0') ];
+
+// Sept 22 - 26
+cs10.week5 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Sept 29 - Oct 3
+cs10.week6 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Oct 6 - 10
+cs10.week7 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect(null),
+    lab(null),
+    disc('Welcome to CS10!'),
+    hw('HW0') ];
+
+// Oct 13 - 17
+cs10.week8 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Oct 20 - 24
+cs10.week9 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Oct 27 - 31
+cs10.week10 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect(null),
+    lab(null),
+    disc('Welcome to CS10!'),
+    hw('HW0') ];
+
+// Nov 3 - 7
+cs10.week11 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Nov 10 - 14
+cs10.week12 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Nov 17 - 21
+cs10.week13 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect(null),
+    lab(null),
+    disc('Welcome to CS10!'),
+    hw('HW0') ];
+
+// Nov 24 - 28
+cs10.week14 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Dec 1 - 5
+cs10.week15 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+// Dec 8 - 12
+cs10.week16 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect(null),
+    lab(null),
+    disc('Welcome to CS10!'),
+    hw('HW0') ];
+
+// Dec 15 - 19
+cs10.week17 = [
+    readings(null),
+    lect(null),
+    lab(null),
+    lect('Welcome and Abstraction'),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    disc('Getting Started With <span class=“snap”>snap</span>'),
+    hw('Start on HW1') ];
+
+cs10.schedule = [ ];
+for(var i = 1; i <= 17; i += 1) {
+    cs10.schedule.push(cs10['week' + i]);
+}
