@@ -61,7 +61,7 @@ hw = function() {};
 
 
 // ==================================================
-// ========     SCHEDULE ITEMS             ==========
+// ==========     SCHEDULE ITEMS           ==========
 // ==================================================
 
 // Aug 25 - 29
@@ -70,7 +70,7 @@ cs10.week1 = [
     lect(null),
     lab(null),
     lect(null),
-    lab(null),
+    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
     disc('Welcome to CS10!'),
     hw('HW0') ];
 
@@ -80,7 +80,7 @@ cs10.week2 = [
     lect(null),
     lab(null),
     lect('Welcome and Abstraction'),
-    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
+    lab(),
     disc('Getting Started With <span class=“snap”>snap</span>'),
     hw('Start on HW1') ];
 
