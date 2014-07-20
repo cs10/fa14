@@ -7,26 +7,26 @@ lectures = [
         video: 'url',
         style: 'optional classes to apply'
     }
-]
+];
 
 /* DATA MODELS -- OPTIONAL DATA NOTED */
 reading = {
     title: 'Name',
     url: 'duh',
     type: 'required hard' // or whatver
-}
+};
 
 lab = {
     title: '',
     url: '',
     RQ: 1, // OPTIONAL -- INT,
     video: '' // OPTIONAL -- LINK
-}
+};
 
 discussion = {
     title: '',
     files: false // OPTIONAL -- default false
-}
+};
 
 cs10 = {};
 
@@ -51,13 +51,13 @@ cs10.newLabObject = function(title, url, rq, video) {
         labObj.video = video;
     }
     return labObj;
-}
+};
 
 var lab = cs10.newLabObject,
-readings = function() {},
-lect = function() {},
-disc = function() {},
-hw = function() {};
+    readings = function() {},
+    lect = function() {},
+    disc = function() {},
+    hw = function() {};
 
 
 // ==================================================
@@ -78,21 +78,21 @@ cs10.week1 = [
 cs10.week2 = [
     readings(null),
     lect(null),
-    lab(null),
+    lab('Build Your Own Blocks', 'berkeley_bjc/intro_new/2-loops-variables.topic', 1),
     lect('Welcome and Abstraction'),
-    lab(),
+    lab('Conditionals', 'berkeley_bjc/intro_new/3-conditionals.topic'),
     disc('Getting Started With <span class=“snap”>snap</span>'),
     hw('Start on HW1') ];
 
 // Sept 8 - 12
 cs10.week3 = [
     readings(null),
-    lect(null),
-    lab(null),
-    lect('Welcome and Abstraction'),
-    lab("Welcome to <span class='snap'>snap</span>", "berkeley_bjc/intro_new/1-introduction.topic"),
-    disc('Getting Started With <span class=“snap”>snap</span>'),
-    hw('Start on HW1') ];
+    lect('Functions'),
+    lab('Functions', 'berkeley_bjc/intro_new/4-abstraction-testing.topic', 2),
+    lect('Creativity and Abstraction'),
+    lab('Lists 1', 'berkeley_bjc/lists/lists-I.topic'),
+    disc('All about lists'),
+    hw('HW1') ];
 
 // Sept 15 - 19
 cs10.week4 = [
