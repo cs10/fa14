@@ -235,6 +235,17 @@ cs10.week17 = [
     hw('Start on HW1') ];
 
 cs10.schedule = [ ];
-for(var i = 1; i <= 17; i += 1) {
-    cs10.schedule.push(cs10['week' + i]);
-}
+cs10.buildCal = function() {
+    var calDiv     = $('#main-cal'),
+        calPills   = $('#cal-sidebar'),
+        calContent = $('#calContent'),
+        selector, title;
+    for(var i = 1; i <= 17; i += 1) {
+        cs10.schedule.push(cs10['week' + i]);
+        selector = 'cal-week-' + i;
+        title = 'Week ' + i;
+        calPills.append('<li><a href="' + selector + '" role="tab" data-toggle="tab">' + title + '</a></li>');
+    }
+};
+
+$(document).ready(cs10.buildCal);

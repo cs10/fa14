@@ -6,6 +6,11 @@
         <meta name=viewport content="width=device-width, initial-scale=1">
         <meta name="description" content="CS10, The Beauty and Joy of Computing is an introductory computer science class designed for anyone and everyone." />
         <meta name="keywords" content="CS10, UC, Berkeley, CS, computer science, BJC, computing, education, Michael Ball" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <style type="text/css">
         body {
             background-image: url(images/gobo_watermark.gif); /* watermark */
@@ -140,6 +145,10 @@
           <h1>Assignment Calendar</h1>
       </div>
 
+      <div id="cal-bs">
+          <h1>Assignment Calendar</h1>
+      </div>
+      
       <div id="weekly">
           <h1>Weekly Schedule</h1>
           <h3>Click on any event to see the building location on a map.</h3>
@@ -225,18 +234,19 @@
                   dataType: 'html',
                   url: 'includes/' + item + '.html',
                   success: function(content, unused, notused) {
-                      $('#' + item).append(content)
+                      $('#' + item).append(content);
                   }
               });
-          };
+          }
           // addContent('overview');
           addContent('calendar');
+          addContent('cal-bs');
           addContent('grading');
       </script>
       <script type="text/javascript" src="assets/cs10.js"></script>
-            <script type="text/javascript" src="assets/calendar.js"></script>
-      <script
-      type='text/javascript' src='assets/fullcalendar.js'></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script type='text/javascript' src='assets/fullcalendar.js'></script>
       <script type='text/javascript' src='assets/gcal.js'></script>
       <script type='text/javascript' src='assets/staff.js'></script>
       <script>
@@ -287,5 +297,6 @@
         ga('create', 'UA-47210910-1', 'berkeley.edu');
         ga('send', 'pageview');
       </script>
+      <script type="text/javascript" src="assets/calendar.js"></script>
     </body>
 </html>
