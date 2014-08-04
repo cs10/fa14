@@ -97,12 +97,12 @@ cs10.week3 = [
 // Sept 15 - 19
 cs10.week4 = [
     readings(null),
-    lect(null),
-    lab(null),
-    lect(null),
-    lab(null),
-    disc('Welcome to CS10!'),
-    hw('HW0') ];
+    lect('3D Graphics'),
+    lab('Lists 1 & HW Help', 'berkeley_bjc/lists/lists-I.topic', 3),
+    lect('Programming Paradigms'),
+    lab('Algorithms', 'berkeley_bjc/areas/algorithms.topic'),
+    disc('Lists'),
+    hw('Start on HW2') ];
 
 // Sept 22 - 26
 cs10.week5 = [
