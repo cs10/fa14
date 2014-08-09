@@ -7,10 +7,10 @@
         <meta name="description" content="CS10, The Beauty and Joy of Computing is an introductory computer science class designed for anyone and everyone." />
         <meta name="keywords" content="CS10, UC, Berkeley, CS, computer science, BJC, computing, education, Michael Ball" />
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
         <style type="text/css">
         body {
             background-image: url(images/gobo_watermark.gif); /* watermark */
@@ -117,8 +117,8 @@
         <h1 class="center" id="quicklinks">Quick Links</h1>
         <div>
             <div class="ql">
-              <a href="http://snap.berkeley.edu/run/">Snap!</a>
-              <br />(our software)
+                <a href="http://snap.berkeley.edu/run/">Snap!</a>
+                <br />(our software)
             </div>
             <div class="ql">
                 <!-- UPDATE EACH SEMESTER -->
@@ -141,18 +141,15 @@
             <h1>Overview</h1>
         </div>
 
-      <div id="calendar">
+        <div id="cal-bs">
           <h1>Assignment Calendar</h1>
-      </div>
+        </div>
 
-      <div id="cal-bs">
-          <h1>Assignment Calendar</h1>
-      </div>
-      
-      <div id="weekly">
-          <h1>Weekly Schedule</h1>
-          <h3>Click on any event to see the building location on a map.</h3>
-          <div id="oh-cal"></div>
+        <div class="clearfix"></div>
+        <div id="weekly">
+                <h1>Weekly Schedule</h1>
+                <h3>Click on any event to see the building location on a map.</h3>
+                <div id="oh-cal"></div>
       </div>
 
       <div id="staff">
@@ -222,12 +219,12 @@
           </a>
       </div>
       <link href="assets/fullcalendar.css" rel="stylesheet" type="text/css" />
-
       <link href="assets/cs10style.css" rel="stylesheet" type="text/css" />
 
-      <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+      <script type='text/javascript' src='assets/lib/jquery.min.js'></script>
+      <script type="text/javascript" src="assets/cs10.js"></script>
       <script type="text/javascript">
-          function addContent(item) {
+          function addContent(item, fn) {
               $.ajax({
                   async: true,
                   cache: true,
@@ -235,30 +232,29 @@
                   url: 'includes/' + item + '.html',
                   success: function(content, unused, notused) {
                       $('#' + item).append(content);
-                  }
+                  },
+                  complete: (fn ? fn : [])
               });
           }
           // addContent('overview');
-          addContent('calendar');
+          // addContent('calendar');
           addContent('cal-bs');
           addContent('grading');
       </script>
-      <script type="text/javascript" src="assets/cs10.js"></script>
       <!-- Latest compiled and minified JavaScript -->
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-      <script type='text/javascript' src='assets/fullcalendar.js'></script>
-      <script type='text/javascript' src='assets/gcal.js'></script>
+      <script type='text/javascript' src='assets/lib/bootstrap.min.js'></script>
+      <script type='text/javascript' src='assets/lib/fullcalendar.js'></script>
+      <script type='text/javascript' src='assets/lib/gcal.js'></script>
       <script type='text/javascript' src='assets/staff.js'></script>
       <script>
-
       // Review session dates
-      var quest      = daysUntil(new Date(2014, 1, 16)),
-          midterm    = daysUntil(new Date(2014, 2, 16)),
-          final      = daysUntil(new Date(2014, 4, 11))
+      var quest   = daysUntil(new Date(2014, 1, 16)),
+          midterm = daysUntil(new Date(2014, 2, 16)),
+          final   = daysUntil(new Date(2014, 4, 11));
 
       function daysUntil(day) {
-        var MS_DAY = 1000*60*60*24
-        return Math.floor((new Date() - day) / MS_DAY)
+        var MS_DAY = 1000*60*60*24;
+        return Math.floor((new Date() - day) / MS_DAY);
       }
 
       function inRange(num) { return num >= -7 && num < 1 }
