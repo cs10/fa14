@@ -229,6 +229,7 @@
       <script type='text/javascript' src='assets/lib/jquery.min.js'></script>
       <script type="text/javascript" src="assets/cs10.js"></script>
       <script type="text/javascript">
+          cs10 = window.cs10 || {};
           function addContent(item, fn) {
               $.ajax({
                   async: true,
@@ -243,7 +244,7 @@
           }
           addContent('overview');
           addContent('calendar');
-          addContent('cal-bs');
+          addContent('cal-bs', cs10.buildCal);
           addContent('grading');
       </script>
       <!-- Latest compiled and minified JavaScript -->

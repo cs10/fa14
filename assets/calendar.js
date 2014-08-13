@@ -26,8 +26,7 @@ discussion = {
     url: '' // OPTIONAL -- default is none.
 };
 
-cs10 = {};
-window.cs10 = cs10;
+cs10 = window.cs10 || {};
 
 cs10.newLabObject = function(title, url, rq, video) {
     // FIXME -- better handle the URL via config
@@ -340,7 +339,7 @@ cs10.buildCal = function() {
         selector = 'cal-week-' + i;
         title = 'Week ' + i;
         // TODO: Add the date.
-        pillsList += '<li><a href="' + selector + '" id="' + selector +
+        pillsList += '<li><a href="#' + selector +
         '" target="' + selector + '" role="tab" data-toggle="tab">' + title + '</a></li>\n';
     }
 
