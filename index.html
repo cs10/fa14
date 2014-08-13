@@ -144,24 +144,29 @@
         <div id="cal-bs">
           <h1>Assignment Calendar</h1>
         </div>
-
         <div class="clearfix"></div>
+
+        <div id="calendar">
+          <h1>Assignment Calendar</h1>
+        </div>
+        <div class="clearfix"></div>
+
         <div id="weekly">
-                <h1>Weekly Schedule</h1>
-                <h3>Click on any event to see the building location on a map.</h3>
-                <div id="oh-cal"></div>
-      </div>
+            <h1>Weekly Schedule</h1>
+            <h3>Click on any event to see the building location on a map.</h3>
+            <div id="oh-cal"></div>
+        </div>
 
-      <div id="staff">
-          <h1>Staff</h1>
+        <div id="staff">
+            <h1>Staff</h1>
 
-          <h2>Instructor</h2>
-          <div id="instructors"></div>
-          <div style='clear: both;'></div>
+            <h2>Instructor</h2>
+            <div id="instructors"></div>
+            <div style='clear: both;'></div>
 
-          <h2>Teaching Assistants</h2>
-          <div id="tas"></div>
-          <div style='clear: both;'></div>
+            <h2>Teaching Assistants</h2>
+            <div id="tas"></div>
+            <div style='clear: both;'></div>
 
           <h2>Readers</h2>
           <div id="readers"></div>
@@ -236,8 +241,8 @@
                   complete: (fn ? fn : [])
               });
           }
-          // addContent('overview');
-          // addContent('calendar');
+          addContent('overview');
+          addContent('calendar');
           addContent('cal-bs');
           addContent('grading');
       </script>
