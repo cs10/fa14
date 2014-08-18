@@ -200,7 +200,8 @@ jessicaA = { name: 'Jessica Andrich',
     imgSrc: 'JessicaAndrich.jpg' }
 
 // Snap
-JocelynTakahashi = { name: 'Jocelyn Takahashi',
+JocelynTakahashi = { 
+    name: 'Jocelyn Takahashi',
     img: 'Sp13/JocelynTakahashi.jpg',
     imgSrc: '../Sp13/t/JocelynTakahashi.jpg' }
 
@@ -389,10 +390,10 @@ function imgError(image) {
 
 // Build a basic object for a person from the current semester.
 function baseObj(name) {
-    src = name.replace(/ /g , '')
+    src = name.replace(/ /g , '');
     return { name: name,
              img: 'Sp14/' + src + '.jpg',
-             imgSrc: src + '.jpg' }
+             imgSrc: src + '.jpg' };
 }
 
 function buildPerson(data, width) {
