@@ -161,7 +161,7 @@ benC = { name: 'Ben Carvalho',
     img: 'Fa13/BenCarvalho.jpg',
     imgSrc: 'BenCarvalho.jpg',
     bio: 'BenjaminCarvalhoBio.txt' }
-oliverO = { name: 'Oliver O\'Donnell',
+oliverO = { name: 'Oliver O"Donnell',
     img: 'Sp14/OliverODonnell.jpg',
     imgSrc: 'OliverODonnell.jpg',
     bio: 'Oliver ODonnell.txt' }
@@ -399,27 +399,27 @@ function buildPerson(data, width) {
     // Create a table element with this person's data, setting a class for width
     elm = '<div style="width:' + 100/width + '%;">'
     if (!!data.img) {
-        elm += '<a href=\'images/' + data.img + '\'>'
+        elm += '<a href="images/' + data.img + '">'
     }
-    elm += '<img onerror="imgError(this)" class=\'staff\' width=\'200\' height=\'300\' align=\'center\' '
-    elm += 'alt=\'' + data.name + '\' title=\'' + data.name + '\' src=\'images/small/'
-    elm += data.imgSrc + '\' />'
+    elm += '<img onerror="imgError(this)" class="staff" width="200" height="300" align="center" '
+    elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/'
+    elm += data.imgSrc + '" />'
     if (!!data.img) {
         elm += '</a>'
     }
     elm += '<br /><strong>'
     if (!!data.web) {
-        elm += '<a href=\'' + data.web + '\'>' + data.name + '</a>'
+        elm += '<a href="' + data.web + '">' + data.name + '</a>'
     } else {
         elm += data.name
     }
     elm += '</strong> '
     if (!!data.bio) {
-        elm += '(<a href=\'bios/' + data.bio + '\'>bio</a>)'
+        elm += '(<a href="bios/' + data.bio + '">bio</a>)'
     }
     if (!!data.email) {
-        elm += '<br /><a href=\'mailto:' + data.email +
-        '?subject=[CS10] SUBJECT\'><code>' + data.email + '</code></a>';
+        elm += '<br /><a href="mailto:' + data.email +
+        '?subject=[CS10] SUBJECT"><code>' + data.email + '</code></a>';
     }
     if (!!data.office) {
         elm +=  '<br />' + data.office
@@ -436,7 +436,7 @@ function buildGroup(group, w) {
     doc = document.getElementById(group)
     content = ''
     for (var i = 0; i < ppl.length; i += w) {
-        content += '<div class=\'staffimgrow\'>'
+        content += '<div class="staffimgrow">'
         for(var j = i; j < (i + w) && j < ppl.length; j += 1) {
             if (i + w > ppl.length) {
                  w = ppl.length - i
@@ -444,7 +444,7 @@ function buildGroup(group, w) {
             content += buildPerson(ppl[j], w)
         }
         content += '</div>'
-        content += '<div style=\'clear: both;\'></div>';
+        content += '<div style="clear: both;"></div>';
     }
     doc.innerHTML += content
 }
