@@ -69,26 +69,11 @@ maxD = {
     imgSrc: 'MaxDougherty.jpg',
     email: 'mdougherty@berkeley.edu'
 }
-IanBirnam = {
-    name: 'TA Ian Birnam',
-    img: 'Sp14/IanBirnam.jpg',
-    imgSrc: 'IanBirnam.jpg',
-    web: 'http://ianbirnam.com',
-    bio: 'IanBio.txt',
-    email: 'ibirnam@berkeley.edu'
-}
 jeffreyS = {
     name: 'TA Jeffrey Snowiss',
     img: 'Fa12/JeffreySnowiss.jpg',
     imgSrc: 'JeffreySnowiss.jpg',
     email: 'jasnowiss10@gmail.com'
-}
-PeterSujan = {
-    name: 'TA Peter Sujan',
-    img: 'Fa12/PeterSujan.jpg',
-    imgSrc: 'PeterSujan.jpg',
-    bio: 'PeterBio.txt',
-    email: 'peterasujan@berkeley.edu'
 }
 victoriaS = {
     name: 'TA Victoria Shi',
@@ -422,7 +407,7 @@ function buildPerson(data, width) {
         '?subject=[CS10] SUBJECT"><code>' + data.email + '</code></a>';
     }
     if (!!data.office) {
-        elm +=  '<br />' + data.office
+        elm +=  '<br />' + data.office;
     }
     elm += '</div>';
     return elm;
@@ -432,21 +417,21 @@ function buildGroup(group, w) {
     // Build a set of table rows, with W items per row
     // based on the people in the GROUP
     // Add them to the appropriate HTML table element
-    ppl = all[group]
-    doc = document.getElementById(group)
-    content = ''
+    ppl = all[group];
+    doc = document.getElementById(group);
+    content = '';
     for (var i = 0; i < ppl.length; i += w) {
-        content += '<div class="staffimgrow">'
+        content += '<div class="staffimgrow">';
         for(var j = i; j < (i + w) && j < ppl.length; j += 1) {
             if (i + w > ppl.length) {
-                 w = ppl.length - i
+                 w = ppl.length - i;
              }
-            content += buildPerson(ppl[j], w)
+            content += buildPerson(ppl[j], w);
         }
-        content += '</div>'
-        content += '<div style="clear: both;"></div>';
+        content += '</div>';
+        content += '<div class="clearfix"></div>';
     }
-    doc.innerHTML += content
+    doc.innerHTML += content;
 }
 
 function addLoadEvent(func) {
