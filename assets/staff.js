@@ -44,7 +44,8 @@ DanGarcia = {
     bio: 'DanBio.txt',
     email: 'ddgarcia@cs.berkeley.edu',
     office: '777 Soda, (510) 517-4041'
-}
+};
+
 GeraldF = {
     name: 'Dr. Gerald Friedland',
     img: 'Fa13/Gerald.jpg',
@@ -53,7 +54,8 @@ GeraldF = {
     //bio: 'DanBio.txt',
     email: 'fractor@berkeley.edu',
     office: '329 Soda'
-}
+};
+
 // TAs
 MichaelBall = {
     name: 'Head TA Michael Ball',
@@ -80,72 +82,105 @@ victoriaS = {
     img: 'Fa13/VictoriaShi.jpg',
     imgSrc: 'VictoriaShi.jpg',
     email: 'victoria.shi@berkeley.edu'
-}
+};
+
 rachelH = {
     name: 'TA Rachel Huang',
     img: 'Fa13/RachelHuang.jpg',
     imgSrc: 'RachelHuang.jpg',
     email: 'rachelhuang072@berkeley.edu'
-}
+};
+
 jannaG = {
     name: 'TA Janna Golden',
     img: 'Sp14/JannaGolden.jpg',
     imgSrc: 'JannaGolden.jpg',
     email: 'jannagolden@berkeley.edu'
-}
+};
+
 sumerM = {
     name: 'TA Sumer Mohammed',
     img: 'Fa12/SumerMohammed.jpg',
     imgSrc: 'SumerMohammed.jpg',
-    email: 'sumermohammed@berkeley.edu' }
+    email: 'sumermohammed@berkeley.edu' };
 
-// Readers
 josephC = {
-    name: 'Reader Joseph Cawthorne',
+    name: 'TA Joseph Cawthorne',
     img: 'Fa13/JosephCawthorne.jpg',
-    imgSrc: 'JosephCawthorne.jpg' }
-songS   = {
-    name: 'Reader Song Sok',
-    img: 'Fa13/SongSok.jpg',
-    imgSrc: 'SongSok.jpg' }
-claireW = {
-    name: 'Reader Claire Watanabe',
-    img: 'Fa13/ClaireWatanabe.jpg',
-    imgSrc: 'ClaireWatanabe.jpg' }
-jaclynB = {
-    name: 'Reader Jaclyn Burge',
-    img: 'Fa13/JaclynBurge.jpg',
-    imgSrc: 'JaclynBurge.jpg' }
-andyS   = {
-    name: 'Reader Andrew Schmitt',
-    img: 'Sp14/AndrewSchmitt.jpg',
-    imgSrc: 'AndrewSchmitt.jpg' }
+    imgSrc: 'JosephCawthorne.jpg' };
 
-// Staff
+jaclynB = {
+    name: 'TA Jaclyn Burge',
+    img: 'Fa13/JaclynBurge.jpg',
+    imgSrc: 'JaclynBurge.jpg' };
+
+andyS   = {
+    name: 'TA Andrew Schmitt',
+    img: 'Sp14/AndrewSchmitt.jpg',
+    imgSrc: 'AndrewSchmitt.jpg' };
+
 LaurenMock = {
-    name: 'Project Manager Lauren Mock',
+    name: 'Head TA Lauren Mock',
     img: 'Sp14/LaurenMock.jpg',
     imgSrc: 'LaurenMock.jpg',
     web: 'http://linkedin.com/in/laurenmock',
     email: 'lmock@berkeley.edu'
-}
+};
+
+AdamK = {
+    name: 'TA Adam Kuphaldt',
+    img: 'Sp14/AdamKuphaldt.jpg',
+    imgSrc: 'AdamKuphaldt.jpg',
+    email: '' // TODO
+};
+AranyU = {
+    name: 'TA Arany Uthayakumar',
+    img: 'Sp14/AranyUthayakumar.jpg',
+    imgSrc: 'AranyUthayakumar.jpg',
+    email: '' // TODO
+};
+
+StevenT = {
+    name: 'TA Steven Traversi',
+    img: 'Sp14/StevenTraversi.jpg',
+    imgSrc: 'StevenTraversi.jpg',
+    email: '' // TODO
+};
+
+
+// Readers
+songS   = {
+    name: 'Reader Song Sok',
+    img: 'Fa13/SongSok.jpg',
+    imgSrc: 'SongSok.jpg' };
+
+claireW = {
+    name: 'Reader Claire Watanabe',
+    img: 'Fa13/ClaireWatanabe.jpg',
+    imgSrc: 'ClaireWatanabe.jpg' };
+
+benC = { name: 'Reader Ben Carvalho',
+    img: 'Fa13/BenCarvalho.jpg',
+    imgSrc: 'BenCarvalho.jpg',
+    bio: 'BenjaminCarvalhoBio.txt' }
+
+
+// Staff
 
 // edX
-KunalMarwaha = { name: 'edX Team Lead Kunal Marwaha',
+KunalMarwaha = {
+    name: 'edX Team Lead Kunal Marwaha',
     img: 'Sp14/KunalMarwaha.jpg',
     imgSrc: 'KunalMarwaha.jpg' }
 
 // snap
-KyleZentner = { name: 'Snap! Team Lead Kyle Zentner',
+KyleZentner = {
+    name: 'Snap! Team Lead Kyle Zentner',
     img: 'Sp14/KyleZentner.jpg',
     imgSrc: 'KyleZentner.jpg' }
 
 // Lab Assistants
 // TAiT -- TAiT is auto added
-benC = { name: 'Ben Carvalho',
-    img: 'Fa13/BenCarvalho.jpg',
-    imgSrc: 'BenCarvalho.jpg',
-    bio: 'BenjaminCarvalhoBio.txt' }
 oliverO = { name: 'Oliver O"Donnell',
     img: 'Sp14/OliverODonnell.jpg',
     imgSrc: 'OliverODonnell.jpg',
@@ -175,9 +210,10 @@ JocelynTakahashi = { name: 'Jocelyn Takahashi',
 
 instructors = [ GeraldF ];
 
-tas = [ LaurenMock, jannaG, rachelH, sumerM, victoriaS, MichaelBall, jeffreyS, maxD ]
+tas = [ MichaelBall, LaurenMock, jannaG, rachelH, sumerM, victoriaS, jaclynB, AranyU,
+         jeffreyS, maxD, andyS, josephC, AdamK, StevenT ];
 
-readers = [ andyS, claireW, jaclynB, josephC, songS ]
+readers = [ claireW, benC ];
 
 las = [ 'Adam Brown',
         'Alex Freeman',
@@ -217,10 +253,8 @@ las = [ 'Adam Brown',
         'Victor Solis',
         'Yibing Chen' ]
 
-tait = [ benC, songS, josephC, andyS,
-    'Adam Kuphaldt',
+tait = [ benC,
     'Alex McKinney',
-    'Arany Uthayakumar',
     'Brandon Chen',
     'Carlos Flores',
     carenT,
@@ -240,7 +274,6 @@ tait = [ benC, songS, josephC, andyS,
     'Rafayel Mkrtchyan',
     'Saagar Bakshi',
     'Sean Scofield',
-    'Steven Traversi',
     'Sulaiman Haruna',
     'Veersuvrat Rajpal' ]
 
@@ -381,7 +414,7 @@ function buildPerson(data, width) {
     if (!!data.img) {
         elm += '<a href="images/' + data.img + '">'
     }
-    
+
     // FIXME -- responsiveness
     elm += '<img onerror="imgError(this)" class="staff" width="200" height="300" align="center" '
     elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/'
