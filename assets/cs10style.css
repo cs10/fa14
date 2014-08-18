@@ -247,3 +247,24 @@ div.staffimgrow > div {
   text-align: center;
   padding: .5em 0em;
 }
+
+
+/* .snap inserts the logo using the proper formatting.
+* Insert using "<span class="snap">snap</span>"
+*/
+.snap:first-letter {
+  font-variant: normal;
+}
+
+.snap {
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif; /* FIXME */
+}
+
+.snap:after {
+  content: "!";
+  font-style: italic;
+}
+/* END .snap */
