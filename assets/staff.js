@@ -47,12 +47,12 @@ DanGarcia = {
 }
 GeraldF = {
     name: 'Dr. Gerald Friedland',
-    img: 'DanGarciaUCBFaculty2004.jpg',
-    imgSrc: 'DanGarcia.jpg',
+    img: 'Fa13/Gerald.jpg',
+    imgSrc: 'Gerald.jpg',
     web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
-    bio: 'DanBio.txt',
-    email: 'ddgarcia@cs.berkeley.edu',
-    office: '777 Soda, (510) 517-4041'
+    //bio: 'DanBio.txt',
+    email: 'fractor@berkeley.edu',
+    office: '329 Soda'
 }
 // TAs
 MichaelBall = {
@@ -173,10 +173,9 @@ JocelynTakahashi = { name: 'Jocelyn Takahashi',
 /** LIST DEFINITIONS **/
 /*****************************************************************************/
 
-instructors = [ DanGarcia ];
+instructors = [ GeraldF ];
 
-tas = [ LaurenMock, jannaG, rachelH, sumerM, victoriaS, MichaelBall,
-        IanBirnam, jeffreyS, maxD, PeterSujan ]
+tas = [ LaurenMock, jannaG, rachelH, sumerM, victoriaS, MichaelBall, jeffreyS, maxD ]
 
 readers = [ andyS, claireW, jaclynB, josephC, songS ]
 
@@ -245,7 +244,7 @@ tait = [ benC, songS, josephC, andyS,
     'Sulaiman Haruna',
     'Veersuvrat Rajpal' ]
 
-labdev = [ PeterSujan, LaurenMock, jessicaA, paulI, andyS, 'Liuxiao Zhang',
+labdev = [  LaurenMock, jessicaA, paulI, andyS, 'Liuxiao Zhang',
            'Manisha Sharma', 'Samy Hajal', 'Sulaiman Haruna' ]
 
 edx = [ KunalMarwaha,
@@ -299,9 +298,7 @@ snap = [ KunalMarwaha,
          'Tanvi Kamath',
          'Yuan Yuan' ]
 
-bjc = [ LaurenMock, MichaelBall, PeterSujan, KunalMarwaha,  KyleZentner, 'Omoju Miller' ]
-
-bb = [ 'Omoju Miller', 'Akhila Raju', benC, songS, carenT, andyS ]
+bjc = [ LaurenMock, MichaelBall, KunalMarwaha,  KyleZentner, 'Omoju Miller' ]
 
 
 // If you need to add a new SECTION add it to this object.
@@ -314,12 +311,10 @@ all = {
     tait: tait,
     edx: edx,
     snap: snap,
-    bb: bb,
     labdev: labdev,
     bjc: bjc
 };
 
-//LOL - Ian
 LIST_OF_SHAME = [
 'AngelaSo.jpg',
 'HarshMujoo.jpg',
@@ -386,6 +381,8 @@ function buildPerson(data, width) {
     if (!!data.img) {
         elm += '<a href="images/' + data.img + '">'
     }
+    
+    // FIXME -- responsiveness
     elm += '<img onerror="imgError(this)" class="staff" width="200" height="300" align="center" '
     elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/'
     elm += data.imgSrc + '" />'
