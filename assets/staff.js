@@ -45,7 +45,15 @@ DanGarcia = {
     email: 'ddgarcia@cs.berkeley.edu',
     office: '777 Soda, (510) 517-4041'
 }
-
+GeraldF = {
+    name: 'Dr. Gerald Friedland',
+    img: 'DanGarciaUCBFaculty2004.jpg',
+    imgSrc: 'DanGarcia.jpg',
+    web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
+    bio: 'DanBio.txt',
+    email: 'ddgarcia@cs.berkeley.edu',
+    office: '777 Soda, (510) 517-4041'
+}
 // TAs
 MichaelBall = {
     name: 'Head TA Michael Ball',
@@ -170,7 +178,7 @@ paulI = { name: 'Paul Irwin',
 jessicaA = { name: 'Jessica Andrich',
     img: 'Fa13/JessicaAndrich.jpg',
     imgSrc: 'JessicaAndrich.jpg' }
-    
+
 // Snap
 JocelynTakahashi = { name: 'Jocelyn Takahashi',
     img: 'Sp13/JocelynTakahashi.jpg',
@@ -255,10 +263,10 @@ tait = [ benC, songS, josephC, andyS,
 labdev = [ PeterSujan, LaurenMock, jessicaA, paulI, andyS, 'Liuxiao Zhang',
            'Manisha Sharma', 'Samy Hajal', 'Sulaiman Haruna' ]
 
-edx = [ KunalMarwaha, 
-        LaurenMock, 
-        josephC, 
-        'Sean Scofield', 
+edx = [ KunalMarwaha,
+        LaurenMock,
+        josephC,
+        'Sean Scofield',
         'Akhila Raju',
         'Alex Chao',
         'Harsh Mujoo',
@@ -276,8 +284,8 @@ edx = [ KunalMarwaha,
         'Sophie Cooper',
         'Stephen Shan'  ]
 
-snap = [ KunalMarwaha,  
-         KyleZentner, 
+snap = [ KunalMarwaha,
+         KyleZentner,
          'Aaron Yuan',
          'Andy Cheon',
          'Angela So',
@@ -362,6 +370,10 @@ for(var i = 0; i < tait.length; i++) {
 /* DATA POPULATION FUNCTIONS  */
 /*****************************************************************************/
 
+function imgError(image) {
+    image.src = 'images/NPY3D.jpg';
+}
+
 // Build a basic object for a person from the current semester.
 function baseObj(name) {
     src = name.replace(/ /g , '')
@@ -389,7 +401,7 @@ function buildPerson(data, width) {
     if (!!data.img) {
         elm += '<a href=\'images/' + data.img + '\'>'
     }
-    elm += '<img class=\'staff\' width=\'200\' height=\'300\' align=\'center\' '
+    elm += '<img onerror="imgError(this)" class=\'staff\' width=\'200\' height=\'300\' align=\'center\' '
     elm += 'alt=\'' + data.name + '\' title=\'' + data.name + '\' src=\'images/small/'
     elm += data.imgSrc + '\' />'
     if (!!data.img) {
@@ -456,12 +468,12 @@ addLoadEvent(function() {
 
 /* more code to run on page load */
 // Parameters: a section (HTML 'id') and num of images per row.
-buildGroup('instructors', 1)
-buildGroup('tas', 5)
-buildGroup('readers', 5)
-buildGroup('tait', 5)
-buildGroup('las', 5)
-buildGroup('edx', 5)
-buildGroup('labdev', 5)
-buildGroup('snap', 5)
-buildGroup('bjc', 5)
+buildGroup('instructors', 1);
+buildGroup('tas', 5);
+// buildGroup('readers', 5)
+// buildGroup('tait', 5)
+// buildGroup('las', 5)
+// buildGroup('edx', 5)
+// buildGroup('labdev', 5)
+// buildGroup('snap', 5)
+// buildGroup('bjc', 5)
