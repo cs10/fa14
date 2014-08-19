@@ -200,7 +200,7 @@ jessicaA = { name: 'Jessica Andrich',
     imgSrc: 'JessicaAndrich.jpg' }
 
 // Snap
-JocelynTakahashi = { 
+JocelynTakahashi = {
     name: 'Jocelyn Takahashi',
     img: 'Sp13/JocelynTakahashi.jpg',
     imgSrc: '../Sp13/t/JocelynTakahashi.jpg' }
@@ -367,16 +367,16 @@ LIST_OF_SHAME = [
 'SerenaChan.jpg',
 'StephenShan.jpg',
 'StevenHolman.jpg',
-'VictorSolis.jpg' ]
+'VictorSolis.jpg' ];
 
 // Prepend TAiT to names, except for Readers.
 for(var i = 0; i < tait.length; i++) {
     if (tait[i].constructor === String) {
-        tait[i] = baseObj(tait[i])
+        tait[i] = baseObj(tait[i]);
     }
 
     if (tait[i].name.indexOf('Reader') === -1) {
-        tait[i].name = 'TAiT ' + tait[i].name
+        tait[i].name = 'TAiT ' + tait[i].name;
     }
 }
 
@@ -402,7 +402,7 @@ function buildPerson(data, width) {
 
     // Build data objects for very simple cases with nothing special.
     if (data.constructor === String) {
-        data = baseObj(data)
+        data = baseObj(data);
     }
 
     // If there's no image, use 3D Alanzo
