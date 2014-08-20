@@ -159,10 +159,16 @@ claireW = {
     img: 'Fa13/ClaireWatanabe.jpg',
     imgSrc: 'ClaireWatanabe.jpg' };
 
-benC = { name: 'Reader Ben Carvalho',
+benC = {
+    name: 'Reader Ben Carvalho',
     img: 'Fa13/BenCarvalho.jpg',
     imgSrc: 'BenCarvalho.jpg',
-    bio: 'BenjaminCarvalhoBio.txt' }
+    bio: 'BenjaminCarvalhoBio.txt' };
+
+brandonC = {
+    name: 'Reader Brandon Chen',
+    img: 'Sp14/BrandonChen.jpg',
+    imgSrc: 'BrandonChen.jpg',}
 
 
 // Staff
@@ -211,10 +217,10 @@ JocelynTakahashi = {
 
 instructors = [ GeraldF ];
 
-tas = [ MichaelBall, LaurenMock, jannaG, rachelH, sumerM, victoriaS, jaclynB, AranyU,
-         jeffreyS, maxD, andyS, josephC, AdamK, StevenT ];
+tas = [ MichaelBall, LaurenMock, AdamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
+        rachelH, sumerM, StevenT, victoriaS];
 
-readers = [ claireW, benC ];
+readers = [ claireW, benC, brandonC ];
 
 las = [ 'Adam Brown',
         'Alex Freeman',
