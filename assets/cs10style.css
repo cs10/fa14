@@ -248,6 +248,11 @@ div.staffimgrow > div {
   padding: .5em 0em;
 }
 
+.yt-vid {
+  /* 16:9 Aspect ratio */
+  max-height: 400px;
+  max-width: 711px;
+}
 
 /* .snap inserts the logo using the proper formatting.
 * Insert using "<span class="snap">snap</span>"
