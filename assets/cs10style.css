@@ -123,10 +123,11 @@ table.grading {
 /** CALENDAR CLASSES **/
 /*****************************************************************************/
 /* All Cells */
-tr.cal > td,
-tr.cal > th {
+.table tr.cal > td,
+.table tr.cal > th {
+    vertical-align: middle;
     border: 2px solid white;
-    padding: 3px; /* FIXME */
+    padding: 0px; /* FIXME */
     margin: 2px;
 }
 
