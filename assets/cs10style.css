@@ -127,7 +127,7 @@ table.grading {
 .table tr.cal > th {
     vertical-align: middle;
     border: 2px solid white;
-    padding: 0px; /* FIXME */
+    padding: 2px; /* FIXME */
     margin: 2px;
 }
 
@@ -189,7 +189,8 @@ tr.cal > td:nth-child(2) {
 
 div.inner {
     vertical-align: middle;
-    padding: .5em;
+    margin: -2px; /* Opposite of the inner cell padding */
+    padding: 2px;
 }
 
 /* WEEKLY CALENDAR */
