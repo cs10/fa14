@@ -136,12 +136,12 @@ AdamK = {
     imgSrc: 'AdamKuphaldt.jpg',
     email: '' // TODO
 };
+
 AranyU = {
     name: 'TA Arany Uthayakumar',
     img: 'Sp14/AranyUthayakumar.jpg',
     imgSrc: 'AranyUthayakumar.jpg',
-    email: '' // TODO
-};
+    email: ' arany@berkeley.edu' };
 
 StevenT = {
     name: 'TA Steven Traversi',
