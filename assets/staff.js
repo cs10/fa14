@@ -63,7 +63,7 @@ MichaelBall = {
     imgSrc: 'MichaelBall.jpg',
     web: 'http://michaelballphoto.com',
     bio: 'MichaelBall.txt',
-    email: 'cs10-ta@imail.eecs.berkeley.edu'
+    email: 'ball@berkeley.edu'
 }
 maxD = {
     name: 'TA Max Dougherty',
