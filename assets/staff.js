@@ -112,7 +112,9 @@ josephC = {
 jaclynB = {
     name: 'TA Jaclyn Burge',
     img: 'Fa13/JaclynBurge.jpg',
-    imgSrc: 'JaclynBurge.jpg' };
+    imgSrc: 'JaclynBurge.jpg',
+    web: 'www.jacburge.me',
+    email: 'jacburge@berkeley.edu' };
 
 andyS   = {
     name: 'TA Andrew Schmitt',
