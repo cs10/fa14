@@ -107,7 +107,8 @@ sumerM = {
 josephC = {
     name: 'TA Joseph Cawthorne',
     img: 'Fa13/JosephCawthorne.jpg',
-    imgSrc: 'JosephCawthorne.jpg' };
+    imgSrc: 'JosephCawthorne.jpg',
+    email: 'cs10tajcawth@gmail.com' };
 
 jaclynB = {
     name: 'TA Jaclyn Burge',
