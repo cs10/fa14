@@ -115,7 +115,7 @@ jaclynB = {
     img: 'Fa13/JaclynBurge.jpg',
     imgSrc: 'JaclynBurge.jpg',
     web: 'www.jacburge.me',
-    email: 'jacburge@berkeley.edu' };
+    email: 'jacburge.cs10@gmail.com' };
 
 andyS   = {
     name: 'TA Andrew Schmitt',
