@@ -81,8 +81,7 @@ victoriaS = {
     name: 'TA Victoria Shi',
     img: 'Fa13/VictoriaShi.jpg',
     imgSrc: 'VictoriaShi.jpg',
-    email: 'victoria.shi@berkeley.edu'
-};
+    email: 'victoria.shi@berkeley.edu' };
 
 rachelH = {
     name: 'TA Rachel Huang',
@@ -142,7 +141,7 @@ AranyU = {
     img: 'Sp14/AranyUthayakumar.jpg',
     imgSrc: 'AranyUthayakumar.jpg',
     bio: 'AranyBio.txt',
-    email: ' arany@berkeley.edu' };
+    email: 'arany@berkeley.edu' };
 
 StevenT = {
     name: 'TA Steven Traversi',
