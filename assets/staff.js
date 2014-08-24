@@ -81,6 +81,7 @@ victoriaS = {
     name: 'TA Victoria Shi',
     img: 'Fa13/VictoriaShi.jpg',
     imgSrc: 'VictoriaShi.jpg',
+    bio: 'VictoriaBio.txt',
     email: 'victoria.shi@berkeley.edu' };
 
 rachelH = {
