@@ -206,8 +206,12 @@ table.fc-agenda-slots > tbody > tr > td {
 .fc-today {
     background-color: #FD0;
 }
+/* Don't display the time for each event, redudant in this case. */
+.fc-event-time {
+  display: none;
+}
 /* Set text settings for info in each event*/
-.fc-event-time, .fc-event-title,
+.fc-event-title,
 .fc-event-location, .fc-event-descrip {
     color: #222;
     font-size: 1em;
