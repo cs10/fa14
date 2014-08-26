@@ -420,7 +420,7 @@ function buildPerson(data, width) {
         data.img    = '';
     }
     // Create a table element with this person's data, setting a class for width
-    elm = '<div style="width:' + 100/width + '%;">';
+    elm = '<div class="col-md-2">'; // style="width:' + 100/width + '%;"
     if (!!data.img) {
         elm += '<a href="images/' + data.img + '">';
     }
@@ -461,7 +461,7 @@ function buildGroup(group, w) {
     doc = document.getElementById(group);
     content = '';
     for (var i = 0; i < ppl.length; i += w) {
-        content += '<div class="staffimgrow">';
+        content += '<div class="row staffimgrow">';
         for (var j = i; j < (i + w) && j < ppl.length; j += 1) {
             if (i + w > ppl.length) {
                  w = ppl.length - i;

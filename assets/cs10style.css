@@ -253,13 +253,15 @@ img.staff {
 
 div.staffimgrow {
   width: 100%;
-  float: center;
-  text-align: center;
+  margin: 0 auto;
+/*  float: center;
+*/  text-align: center;
 }
 
 div.staffimgrow > div {
-  float: left;
-  text-align: center;
+/*  float: left;
+*/  text-align: center;
+  margin: 0 auto;
   padding: .5em .3em;
   word-wrap: break-word;
 }
