@@ -132,8 +132,8 @@ LaurenMock = {
 
 adamK = {
     name: 'TA Adam Kuphaldt',
-    img: 'Sp14/adamKuphaldt.jpg',
-    imgSrc: 'adamKuphaldt.jpg',
+    img: 'Sp14/AdamKuphaldt.jpg',
+    imgSrc: 'AdamKuphaldt.jpg',
     email: '' // TODO
 };
 
