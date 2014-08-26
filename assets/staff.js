@@ -57,7 +57,7 @@ GeraldF = {
 };
 
 // TAs
-MichaelBall = {
+michaelB = {
     name: 'Head TA Michael Ball',
     img: 'Sp14/MichaelBallTake3.jpg',
     imgSrc: 'MichaelBall.jpg',
@@ -130,10 +130,10 @@ LaurenMock = {
     email: 'lmock@berkeley.edu'
 };
 
-AdamK = {
+adamK = {
     name: 'TA Adam Kuphaldt',
-    img: 'Sp14/AdamKuphaldt.jpg',
-    imgSrc: 'AdamKuphaldt.jpg',
+    img: 'Sp14/adamKuphaldt.jpg',
+    imgSrc: 'adamKuphaldt.jpg',
     email: '' // TODO
 };
 
@@ -221,10 +221,10 @@ JocelynTakahashi = {
 
 instructors = [ GeraldF ];
 
-tas = [ MichaelBall, LaurenMock, AdamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
+tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
         rachelH, sumerM, StevenT, victoriaS];
 
-readers = [ claireW, benC, brandonC ];
+readers = [ benC, brandonC, claireW, ];
 
 las = [ 'Adam Brown',
         'Alex Freeman',
@@ -286,10 +286,9 @@ tait = [ benC,
     'Saagar Bakshi',
     'Sean Scofield',
     'Sulaiman Haruna',
-    'Veersuvrat Rajpal' ]
+    'Veersuvrat Rajpal' ];
 
-labdev = [  LaurenMock, jessicaA, paulI, andyS, 'Liuxiao Zhang',
-           'Manisha Sharma', 'Samy Hajal', 'Sulaiman Haruna' ]
+labdev = [  LaurenMock, jessicaA, paulI, andyS ];
 
 edx = [ KunalMarwaha,
         LaurenMock,
@@ -342,7 +341,7 @@ snap = [ KunalMarwaha,
          'Tanvi Kamath',
          'Yuan Yuan' ]
 
-bjc = [ LaurenMock, MichaelBall, KunalMarwaha,  KyleZentner, 'Omoju Miller' ]
+bjc = [ LaurenMock, michaelB, KunalMarwaha,  KyleZentner, 'Omoju Miller' ]
 
 
 // If you need to add a new SECTION add it to this object.
@@ -427,7 +426,7 @@ function buildPerson(data, width) {
     }
 
     // FIXME -- responsiveness
-    elm += '<img onerror="imgError(this)" class="staff" width="200" height="300" align="center" '
+    elm += '<img onerror="imgError(this)" class="staff" align="center" '
     elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/'
     elm += data.imgSrc + '" />'
     if (!!data.img) {
