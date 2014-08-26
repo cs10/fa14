@@ -2,7 +2,7 @@
 // It's value is the cell numbers to deal with.
 // The file dynamically calculates days for the semester and doesn't read
 // dates from specific cells.
-since = [
+var since = [
     [2],       // 0 days -- Sun: readings
     [3, 4],    // 1 day  -- Mon: lec lab 1
     [4],       // 2 days -- Tues: lab 1
@@ -10,19 +10,19 @@ since = [
     [6],       // 4 days -- thurs: lab 2
     [6, 7],    // 5 days -- fri: lab 2, disc, hw
     [2],       // 6 days -- Sat: readings
-]
+];
 
-STYLE  = "10px solid Gold"
-MS_DAY = 1000*60*60*24
+var STYLE  = "10px solid Gold";
+var MS_DAY = 1000*60*60*24;
 // Function used to highlight the current day.
-function updateCalendar() {
+function updateCalendar(date) {
     // The SATURDAY before the first week of the calendar.
-    var start = new Date(2014, 0, 18),
-        today = new Date(),
+    var start = new Date(2014, 7, 18),
+        today = date || new Date(),
         highlight = since[today.getDay()],
         weeks = Math.floor(((today - start) / MS_DAY) / 7), // Weeks SINCE start
         rows = document.getElementsByClassName("cal"),
-        temp = rows[weeks + 1], // +1 is because row 0 is header
+        temp = rows[weeks], // +1 is because row 0 is header
         cells;
 
     // Date is out of range of calendar
@@ -33,35 +33,37 @@ function updateCalendar() {
     cells = temp.cells;
     
     if (today.getDay() === 3) { // HIGHLIGHT LAB ON WEDS BASED ON TIME OF DAY
-        var n = (today.getHours() < 12) ? 4 : 6
-        highlight.push(n)
+        var n = (today.getHours() < 12) ? 4 : 6;
+        highlight.push(n);
     }
 
     // Hack for weeks like spring break, deadweek
     // Not a robust hack, but it should work OK.
-    c = (cells.length == 5) ? 3 : highlight[0]
+    c = (cells.length == 5) ? 3 : highlight[0];
 
-    cells[c].style.border = STYLE
+    cells[c].style.border = STYLE;
     if (c === 2 & weeks >= 2) { // HW, in the row before
         // CANT USE 8 BECAUSE ALL WEEKS ARENT THE SAME DARNIT.
-        prev = rows[weeks].cells
-        rows[weeks].cells[prev.length - 1].style.border = STYLE
+        prev = rows[weeks].cells;
+        rows[weeks].cells[prev.length - 1].style.border = STYLE;
     }
     if (highlight[1] && cells.length > highlight[1]) {
-        cells[highlight[1]].style.border = STYLE
+        cells[highlight[1]].style.border = STYLE;
     }
 
     // Grey out cells that have past
     for(i = 1; i < rows.length; i += 1) {
-        cells = rows[i].cells
+        cells = rows[i].cells;
         for(j = 2; j < cells.length; j += 1) {
-            if (cells[j].style.border) { return }
-            cells[j].style.background = "#BBB"
+            if (cells[j].style.border) { return; }
+            cells[j].style.background = "#BBB";
             // Go 1 level deep to change the background on inner divs.
             // FIXME: Banish the jQuery? or make this recursive... or
-            // not because I wont ever need it? But it might be fun...
-            if ($(cells[j]).has('div')) {
-                $(cells[j]).children().css('background', '#BBB')
+            // not because I would ever need it? But it might be fun...
+            if (typeof $ !== 'undefined') {
+                if ($(cells[j]).has('div')) {
+                    $(cells[j]).children().css('background', '#BBB');
+                }
             }
         }
     }
