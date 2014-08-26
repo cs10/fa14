@@ -53,8 +53,7 @@ GeraldF = {
     web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
     //bio: 'DanBio.txt',
     email: 'fractor@berkeley.edu',
-    office: '329 Soda'
-};
+    office: '329 Soda' };
 
 // TAs
 michaelB = {
@@ -63,20 +62,20 @@ michaelB = {
     imgSrc: 'MichaelBall.jpg',
     web: 'http://michaelballphoto.com',
     bio: 'MichaelBall.txt',
-    email: 'ball@berkeley.edu'
-}
+    email: 'ball@berkeley.edu' };
+
 maxD = {
     name: 'TA Max Dougherty',
     img: 'Sp14/MaxDougherty.jpg',
     imgSrc: 'MaxDougherty.jpg',
-    email: 'mdougherty@berkeley.edu'
-}
+    email: 'mdougherty@berkeley.edu' };
+
 jeffreyS = {
     name: 'TA Jeffrey Snowiss',
     img: 'Fa12/JeffreySnowiss.jpg',
     imgSrc: 'JeffreySnowiss.jpg',
-    email: 'jasnowiss10@gmail.com'
-}
+    email: 'jasnowiss10@gmail.com' };
+
 victoriaS = {
     name: 'TA Victoria Shi',
     img: 'Fa13/VictoriaShi.jpg',
@@ -172,7 +171,7 @@ benC = {
 brandonC = {
     name: 'Reader Brandon Chen',
     img: 'Sp14/BrandonChen.jpg',
-    imgSrc: 'BrandonChen.jpg',}
+    imgSrc: 'BrandonChen.jpg' };
 
 
 // Staff
@@ -181,39 +180,40 @@ brandonC = {
 KunalMarwaha = {
     name: 'edX Team Lead Kunal Marwaha',
     img: 'Sp14/KunalMarwaha.jpg',
-    imgSrc: 'KunalMarwaha.jpg' }
+    imgSrc: 'KunalMarwaha.jpg' };
 
 // snap
 KyleZentner = {
     name: 'Snap! Team Lead Kyle Zentner',
     img: 'Sp14/KyleZentner.jpg',
-    imgSrc: 'KyleZentner.jpg' }
+    imgSrc: 'KyleZentner.jpg' };
 
 // Lab Assistants
 // TAiT -- TAiT is auto added
 oliverO = { name: 'Oliver O"Donnell',
     img: 'Sp14/OliverODonnell.jpg',
     imgSrc: 'OliverODonnell.jpg',
-    bio: 'Oliver ODonnell.txt' }
+    bio: 'Oliver ODonnell.txt' };
+
 carenT = { name: 'Caren Thomas',
     img: 'Sp14/CarenThomas.jpg',
     imgSrc: 'CarenThomas.jpg',
-    bio: 'CarenThomasBio.txt' }
+    bio: 'CarenThomasBio.txt' };
 
 // Lab Dev
 paulI = { name: 'Paul Irwin',
     img: 'Fa13/PaulIrwin.jpg',
-    imgSrc: 'PaulIrwin.jpg' }
+    imgSrc: 'PaulIrwin.jpg' };
 
 jessicaA = { name: 'Jessica Andrich',
     img: 'Fa13/JessicaAndrich.jpg',
-    imgSrc: 'JessicaAndrich.jpg' }
+    imgSrc: 'JessicaAndrich.jpg' };
 
 // Snap
 JocelynTakahashi = {
     name: 'Jocelyn Takahashi',
     img: 'Sp13/JocelynTakahashi.jpg',
-    imgSrc: '../Sp13/t/JocelynTakahashi.jpg' }
+    imgSrc: '../Sp13/t/JocelynTakahashi.jpg' };
 
 /*****************************************************************************/
 /** LIST DEFINITIONS **/
@@ -262,7 +262,7 @@ las = [ 'Adam Brown',
         'Tierney Henderson',
         'Victoria Bian',
         'Victor Solis',
-        'Yibing Chen' ]
+        'Yibing Chen' ];
 
 tait = [ benC,
     'Alex McKinney',
@@ -309,7 +309,7 @@ edx = [ KunalMarwaha,
         'Sneha Dilip',
         songS,
         'Sophie Cooper',
-        'Stephen Shan'  ]
+        'Stephen Shan'  ];
 
 snap = [ KunalMarwaha,
          KyleZentner,
@@ -339,9 +339,9 @@ snap = [ KunalMarwaha,
          'Sara Seacat',
          'Tanisha Singh',
          'Tanvi Kamath',
-         'Yuan Yuan' ]
+         'Yuan Yuan' ];
 
-bjc = [ LaurenMock, michaelB, KunalMarwaha,  KyleZentner, 'Omoju Miller' ]
+bjc = [ LaurenMock, michaelB, KunalMarwaha,  KyleZentner, 'Omoju Miller' ];
 
 
 // If you need to add a new SECTION add it to this object.
@@ -379,7 +379,7 @@ LIST_OF_SHAME = [
 'VictorSolis.jpg' ];
 
 // Prepend TAiT to names, except for Readers.
-for(var i = 0; i < tait.length; i++) {
+for (var i = 0; i < tait.length; i++) {
     if (tait[i].constructor === String) {
         tait[i] = baseObj(tait[i]);
     }
@@ -416,31 +416,31 @@ function buildPerson(data, width) {
 
     // If there's no image, use 3D Alanzo
     if (!data.imgSrc || LIST_OF_SHAME.indexOf(data.imgSrc) !== -1) {
-        data.imgSrc = '../NPY3D.jpg'
-        data.img    = ''
+        data.imgSrc = '../NPY3D.jpg';
+        data.img    = '';
     }
     // Create a table element with this person's data, setting a class for width
-    elm = '<div style="width:' + 100/width + '%;">'
+    elm = '<div style="width:' + 100/width + '%;">';
     if (!!data.img) {
-        elm += '<a href="images/' + data.img + '">'
+        elm += '<a href="images/' + data.img + '">';
     }
 
     // FIXME -- responsiveness
-    elm += '<img onerror="imgError(this)" class="staff" align="center" '
-    elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/'
-    elm += data.imgSrc + '" />'
+    elm += '<img onerror="imgError(this)" class="staff" align="center" ';
+    elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/';
+    elm += data.imgSrc + '" />';
     if (!!data.img) {
-        elm += '</a>'
+        elm += '</a>';
     }
-    elm += '<br /><strong>'
+    elm += '<br /><strong>';
     if (!!data.web) {
-        elm += '<a href="' + data.web + '">' + data.name + '</a>'
+        elm += '<a href="' + data.web + '">' + data.name + '</a>';
     } else {
-        elm += data.name
+        elm += data.name;
     }
-    elm += '</strong> '
+    elm += '</strong> ';
     if (!!data.bio) {
-        elm += '(<a href="bios/' + data.bio + '">bio</a>)'
+        elm += '(<a href="bios/' + data.bio + '">bio</a>)';
     }
     if (!!data.email) {
         elm += '<br /><a href="mailto:' + data.email +
@@ -462,7 +462,7 @@ function buildGroup(group, w) {
     content = '';
     for (var i = 0; i < ppl.length; i += w) {
         content += '<div class="staffimgrow">';
-        for(var j = i; j < (i + w) && j < ppl.length; j += 1) {
+        for (var j = i; j < (i + w) && j < ppl.length; j += 1) {
             if (i + w > ppl.length) {
                  w = ppl.length - i;
              }
@@ -484,12 +484,9 @@ function addLoadEvent(func) {
         oldonload();
       }
       func();
-    }
+    };
   }
 }
-
-addLoadEvent(function() {
-})
 
 /* more code to run on page load */
 // Parameters: a section (HTML 'id') and num of images per row.
