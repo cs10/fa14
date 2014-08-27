@@ -420,7 +420,8 @@ function buildPerson(data, width) {
         data.img    = '';
     }
     // Create a table element with this person's data, setting a class for width
-    elm = '<div class="col-md-2">'; // style="width:' + 100/width + '%;"
+    var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width)); 
+    elm = '<div class="'+ cls + '">';
     if (!!data.img) {
         elm += '<a href="images/' + data.img + '">';
     }
