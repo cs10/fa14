@@ -147,7 +147,7 @@ StevenT = {
     name: 'TA Steven Traversi',
     img: 'Sp14/StevenTraversi.jpg',
     imgSrc: 'StevenTraversi.jpg',
-    email: '' // TODO
+    email: 'straversi@berkeley.edu'
 };
 
 
