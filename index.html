@@ -321,32 +321,41 @@
           // http://arshaw.com/fullcalendar/docs/agenda/
           $('#oh-cal').fullCalendar({
             allDaySlot: false,
-            // slotDuration: 60,
+            slotDuration: "1:00:00",
+            // FIXME -- I don't like this.
             slotEventOverlap: false,
             weekends: wkends,
             defaultView: 'agendaWeek',
-            // minTime: 9,
-            // maxTime: 20,
-            // contentHeight: 750,
-            // events: 'https://www.google.com/calendar/feeds/berkeley.edu_d358eocqj23pak3atie23vk35o%40group.calendar.google.com/public/basic'
+            minTime: "09:00:00",
+            maxTime: "20:00:00",
+            contentHeight: "auto",
+            timezone: 'local',
             eventSources: [
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk%40group.calendar.google.com/public/basic',
+                  cache: true,
                   className: 'lecture' },
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_d358eocqj23pak3atie23vk35o%40group.calendar.google.com/public/basic',
+                  cache: true,
                   className: 'lab' },
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0%40group.calendar.google.com/public/basic',
+                  cache: true,
                   className: 'oh' },
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_1g3duo9lb53vu09orjictriud4%40group.calendar.google.com/public/basic',
+                  cache: true,
                   className: 'disc' },
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_21jprgg43p44oq62g94agbumv8%40group.calendar.google.com/public/basic',
+                  cache: false,
                   className: 'disc', // FIX FOR BUG WITH LAST 2 DISCUSSIONS
-                  currentTimezone: 'America/Chicago' },
+                  timezoneParam: 'America/Chicago' },
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng%40group.calendar.google.com/public/basic',
+                  cache: false,
                   className: 'lab', // FIX FOR BUG WITH LAST LAB
-                  currentTimezone: 'America/Chicago' },
+                  // timezoneParam: 'America/Chicago'
+                },
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_vtlj909a885kh20chsvjfkddb0%40group.calendar.google.com/public/basic',
+                  cache: false,
                   className: 'oh', // FIX FOR BUG WITH LATE OH
-                  currentTimezone: 'America/Chicago' }
+                  timezoneParam: 'America/Chicago' }
             ]
           })
       });

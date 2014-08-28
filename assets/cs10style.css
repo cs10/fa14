@@ -199,16 +199,17 @@ div.inner {
 }
 
 /* Increase the default cell height */
-/*table.fc-agenda-slots > tbody > tr > td {
-    height: 3.2em;
+.fc-slats td {
+	height: 3.2em;
 }
+
 /* Make today be highlighted in gold. */
-/*.fc-today {
-    background-color: #FD0;
-}*/
+/* This selector is what's used in FC 2.1 source */
+.fc-unthemed .fc-today {
+    background: #FD0;
+}
 /* Don't display the time for each event, redudant in this case. */
-/* FIXME -- FC2 */
-.fc-event-time {
+.fc-content > .fc-time {
   display: none;
 }
 /* Set text settings for info in each event*/
@@ -224,7 +225,7 @@ div.inner {
 }*/
 
 .fc-ltr .fc-time-grid .fc-event-container { /* space on the sides of events for LTR (default) */
-    margin: 0 2px;
+    margin: 0 4px;
 }
 
 .lecture {
