@@ -199,19 +199,20 @@ div.inner {
 }
 
 /* Increase the default cell height */
-table.fc-agenda-slots > tbody > tr > td {
+/*table.fc-agenda-slots > tbody > tr > td {
     height: 3.2em;
 }
 /* Make today be highlighted in gold. */
-.fc-today {
+/*.fc-today {
     background-color: #FD0;
-}
+}*/
 /* Don't display the time for each event, redudant in this case. */
+/* FIXME -- FC2 */
 .fc-event-time {
   display: none;
 }
 /* Set text settings for info in each event*/
-.fc-event-title,
+/*.fc-event-title,
 .fc-event-location, .fc-event-descrip {
     color: #222;
     font-size: 1em;
@@ -220,7 +221,12 @@ table.fc-agenda-slots > tbody > tr > td {
 .fc-agenda-axis {
     text-align: center !important;
     font-weight: bold !important;
+}*/
+
+.fc-ltr .fc-time-grid .fc-event-container { /* space on the sides of events for LTR (default) */
+    margin: 0 2px;
 }
+
 .lecture {
     background-color: #FA8072;
 }

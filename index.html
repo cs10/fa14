@@ -97,7 +97,6 @@
                 /* inline-block space fix */
                 margin-right:-4px;
             }
-
         </style>
     </head>
 
@@ -267,7 +266,7 @@
           </a>
       </div>
       <!--END PAGE CONTENT -->
-      <link href="assets/fullcalendar.css" rel="stylesheet" type="text/css" />
+      <link href="assets/lib/fullcalendar.css" rel="stylesheet" type="text/css" />
       <link href="assets/cs10style.css" rel="stylesheet" type="text/css" />
 
       <script type='text/javascript' src='assets/lib/jquery.min.js'></script>
@@ -298,7 +297,8 @@
       </script>
       <!-- Latest compiled and minified JavaScript -->
       <!-- <script type='text/javascript' src='assets/lib/bootstrap.min.js'></script> -->
-      <script type='text/javascript' src='assets/lib/fullcalendar.js'></script>
+      <script type='text/javascript' src='assets/lib/moment.min.js'></script>
+      <script type='text/javascript' src='assets/lib/fullcalendar.min.js'></script>
       <script type='text/javascript' src='assets/lib/gcal.js'></script>
       <script>
       // Review session dates
@@ -312,17 +312,23 @@
       }
 
       function inRange(num) { return num >= -7 && num < 1 }
+      
       $(document).ready(function() {
-          // Show weeks when we are close to at least one session.
-          var wkends = (inRange(quest) || inRange(midterm) || inRange(final));
+          // Show weekends when we are close to at least one review session.
+          var wkends = inRange(quest) || inRange(midterm) || inRange(final);
+          
+          // These options follow the full calendar API.
+          // http://arshaw.com/fullcalendar/docs/agenda/
           $('#oh-cal').fullCalendar({
             allDaySlot: false,
-            slotMinutes: 60,
+            // slotDuration: 60,
+            slotEventOverlap: false,
             weekends: wkends,
             defaultView: 'agendaWeek',
-            minTime: 9,
-            maxTime: 20,
-            contentHeight: 750,
+            // minTime: 9,
+            // maxTime: 20,
+            // contentHeight: 750,
+            // events: 'https://www.google.com/calendar/feeds/berkeley.edu_d358eocqj23pak3atie23vk35o%40group.calendar.google.com/public/basic'
             eventSources: [
               {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk%40group.calendar.google.com/public/basic',
                   className: 'lecture' },
