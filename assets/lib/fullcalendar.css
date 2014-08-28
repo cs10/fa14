@@ -10,9 +10,6 @@
 	text-align: left;
 }
 
-.fc-rtl {
-	text-align: right;
-}
 
 body .fc { /* extra precedence to overcome jqui */
 	font-size: 1em;
@@ -39,10 +36,6 @@ body .fc { /* extra precedence to overcome jqui */
 .fc-unthemed hr,
 .fc-unthemed .fc-popover .fc-header {
 	background: #eee;
-}
-
-.fc-unthemed .fc-popover .fc-header .fc-close {
-	color: #666;
 }
 
 
@@ -355,6 +348,7 @@ temporary rendered events).
 	display: block; /* make the <a> tag block */
 	font-size: .85em;
 	line-height: 1.3;
+  padding: 3px;
 	border-radius: 3px;
 	border: 1px solid #3a87ad; /* default BORDER color */
 	background-color: #3a87ad; /* default BACKGROUND color */

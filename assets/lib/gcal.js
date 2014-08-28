@@ -4,6 +4,24 @@
  * (c) 2013 Adam Shaw
  */
  
+
+// Addition to modify links for CS10 calendar.
+function getRoomUrl(loc) {
+    var base = "http://www.berkeley.edu/map/3dmap/3dmap.shtml?",
+        url  = { SD: 'sutardja',
+                 LKS: 'likashing',
+                 Soda: 'soda',
+                 VLSB: 'valleylifesciences' },
+        room = "",
+        rm   = loc.split(' ')[1];
+        
+    if (url[rm]) {
+        room = url[rm];
+    }
+    
+    return base + room;
+}
+
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
 		define([ 'jquery' ], factory);
@@ -62,26 +80,16 @@ function transformOptions(sourceOptions, start, end, timezone) {
 			var events = [];
 			if (data.feed.entry) {
 				$.each(data.feed.entry, function(i, entry) {
-
-					var url;
-					$.each(entry.link, function(i, link) {
-						if (link.type == 'text/html') {
-							url = link.href;
-							if (timezone && timezone != 'local') {
-								url += (url.indexOf('?') == -1 ? '?' : '&') + 'ctz=' + encodeURIComponent(timezone);
-							}
-						}
-					});
-
 					events.push({
 						id: entry.gCal$uid.value,
 						title: entry.title.$t,
 						start: entry.gd$when[0].startTime,
 						end: entry.gd$when[0].endTime,
-						url: url,
+						url: getRoomUrl(entry.gd$where[0].valueString),
 						location: entry.gd$where[0].valueString,
-						description: entry.content.$t
+						description: entry.gd$where[0].valueString
 					});
+					console.log(entry.gd$where[0].valueString);
 
 				});
 			}
