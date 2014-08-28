@@ -224,7 +224,9 @@ instructors = [ GeraldF ];
 tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
         rachelH, sumerM, StevenT, victoriaS];
 
-readers = [ benC, brandonC, claireW, ];
+// readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
+
+readers = [ 'Alex McKinney','Brandon Chen', 'Carlos Flores', 'Claire Watanabe', 'Jobel Vecino']
 
 las = [ 'Adam Brown',
         'Alex Freeman',
@@ -420,13 +422,12 @@ function buildPerson(data, width) {
         data.img    = '';
     }
     // Create a table element with this person's data, setting a class for width
-    var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width)); 
+    var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
     if (!!data.img) {
         elm += '<a href="images/' + data.img + '">';
     }
 
-    // FIXME -- responsiveness
     elm += '<img onerror="imgError(this)" class="staff" align="center" ';
     elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/';
     elm += data.imgSrc + '" />';
@@ -493,7 +494,7 @@ function addLoadEvent(func) {
 // Parameters: a section (HTML 'id') and num of images per row.
 buildGroup('instructors', 1);
 buildGroup('tas', 5);
-// buildGroup('readers', 5)
+buildGroup('readers', 5)
 // buildGroup('tait', 5)
 // buildGroup('las', 5)
 // buildGroup('edx', 5)
