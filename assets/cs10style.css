@@ -194,13 +194,9 @@ div.inner {
 }
 
 /* WEEKLY CALENDAR */
-#weekly {
-  width: 100%;
-}
-
 /* Increase the default cell height */
 table.fc-agenda-slots > tbody > tr > td {
-    height: 3.2em;
+    height: 3.3em;
 }
 /* Make today be highlighted in gold. */
 .fc-today {
@@ -214,8 +210,10 @@ table.fc-agenda-slots > tbody > tr > td {
 .fc-event-title,
 .fc-event-location, .fc-event-descrip {
     color: #222;
-    font-size: 1em;
+    font-size: .8em;
     padding: 0 0 0 .5em;
+    font-weight: normal;
+    word-wrap: break-word;
 }
 .fc-agenda-axis {
     text-align: center !important;
@@ -254,13 +252,11 @@ img.staff {
 div.staffimgrow {
   width: 100%;
   margin: 0 auto;
-/*  float: center;
-*/  text-align: center;
+  text-align: center;
 }
 
 div.staffimgrow > div {
-/*  float: left;
-*/  text-align: center;
+  text-align: center;
   margin: 0 auto;
   padding: .5em .3em;
   word-wrap: break-word;
