@@ -133,8 +133,7 @@ adamK = {
     name: 'TA Adam Kuphaldt',
     img: 'Sp14/AdamKuphaldt.jpg',
     imgSrc: 'AdamKuphaldt.jpg',
-    email: '' // TODO
-};
+    email: 'akuphaldt@berkeley.edu' };
 
 AranyU = {
     name: 'TA Arany Uthayakumar',
