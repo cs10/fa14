@@ -29,9 +29,9 @@ function updateCalendar(date) {
     if (typeof temp === 'undefined') {
         return;
     }
-    
+
     cells = temp.cells;
-    
+
     if (today.getDay() === 3) { // HIGHLIGHT LAB ON WEDS BASED ON TIME OF DAY
         var n = (today.getHours() < 12) ? 4 : 6;
         highlight.push(n);
