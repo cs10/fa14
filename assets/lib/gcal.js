@@ -10,14 +10,19 @@ function getRoomUrl(loc) {
         url  = { SD: 'sutardja',
                  LKS: 'likashing',
                  Soda: 'soda',
-                 VLSB: 'valleylifesciences' },
+                 VLSB: 'valleylifesciences',
+                 Etch: 'etcheverry',
+                 Etcheverry: 'etcheverry',
+                 Evans: 'evans' },
         room = "",
         rm   = loc.split(' ')[1];
-        
+
     if (url[rm]) {
         room = url[rm];
+    } else {
+        room = rm;
     }
-    
+
     return base + room;
 }
 
