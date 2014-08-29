@@ -12,7 +12,7 @@ var since = [
     [2],       // 6 days -- Sat: readings
 ];
 
-var STYLE  = "10px solid Gold";
+var STYLE  = "8px solid Gold";
 var MS_DAY = 1000*60*60*24;
 // Function used to highlight the current day.
 function updateCalendar(date) {
@@ -81,11 +81,11 @@ function updateReadings() {
 }
 
 function updateLabs() {
-    var urlEnd = "&novideo=true&noreading=true&noassingment=true&course=cs10_sp14.html",
+    var urlEnd = "&novideo=true&noreading=true&noassingment=true&course=cs10_fa14.html",
         links = document.getElementsByClassName("lablink"), i = 0
     for(; i < links.length; i++) {
-        links[i].href += urlEnd
-        links[i].style.fontWeight = 700
-        links[i].target = "_blank"
+        links[i].href += urlEnd;
+        links[i].style.fontWeight = 700;
+        links[i].target = "_blank";
     }
 }
