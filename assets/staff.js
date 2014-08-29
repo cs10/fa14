@@ -161,16 +161,26 @@ claireW = {
     img: 'Fa13/ClaireWatanabe.jpg',
     imgSrc: 'ClaireWatanabe.jpg' };
 
-benC = {
-    name: 'Reader Ben Carvalho',
-    img: 'Fa13/BenCarvalho.jpg',
-    imgSrc: 'BenCarvalho.jpg',
-    bio: 'BenjaminCarvalhoBio.txt' };
-
 brandonC = {
     name: 'Reader Brandon Chen',
     img: 'Sp14/BrandonChen.jpg',
     imgSrc: 'BrandonChen.jpg' };
+
+carlosF = {
+    name: 'Reader Carlos Flores',
+    img: 'Fa13/CarlosFlores.jpg',
+    imgSrc: 'CarlosFlores.jpg' };
+
+alexM = {
+    name: 'Reader Alex McKinney',
+    img: 'Sp14/AlexMcKinney.jpg',
+    imgSrc: 'AlexMcKinney.jpg' };
+
+jobelV = {
+    name: 'Reader Jobel Vecino',
+    img: 'Fa13/JobelVecino.jpg',
+    imgSrc: 'JobelVecino.jpg' };
+
 
 
 // Staff
@@ -199,6 +209,12 @@ carenT = { name: 'Caren Thomas',
     imgSrc: 'CarenThomas.jpg',
     bio: 'CarenThomasBio.txt' };
 
+benC = {
+    name: 'Ben Carvalho',
+    img: 'Fa13/BenCarvalho.jpg',
+    imgSrc: 'BenCarvalho.jpg',
+    bio: 'BenjaminCarvalhoBio.txt' };
+
 // Lab Dev
 paulI = { name: 'Paul Irwin',
     img: 'Fa13/PaulIrwin.jpg',
@@ -223,9 +239,7 @@ instructors = [ GeraldF ];
 tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
         rachelH, sumerM, StevenT, victoriaS];
 
-// readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
-
-readers = [ 'Alex McKinney','Brandon Chen', 'Carlos Flores', 'Claire Watanabe', 'Jobel Vecino']
+readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
 
 las = [ 'Adam Brown',
         'Alex Freeman',
