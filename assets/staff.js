@@ -119,15 +119,15 @@ jaclynB = {
 andyS   = {
     name: 'TA Andrew Schmitt',
     img: 'Sp14/AndrewSchmitt.jpg',
-    imgSrc: 'AndrewSchmitt.jpg' };
+    imgSrc: 'AndrewSchmitt.jpg',
+    email: 'aschmitt@berkeley.edu'};
 
 LaurenMock = {
     name: 'Head TA Lauren Mock',
     img: 'Sp14/LaurenMock.jpg',
     imgSrc: 'LaurenMock.jpg',
     web: 'http://linkedin.com/in/laurenmock',
-    email: 'lmock@berkeley.edu'
-};
+    email: 'lmock@berkeley.edu' };
 
 adamK = {
     name: 'TA Adam Kuphaldt',
