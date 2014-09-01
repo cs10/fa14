@@ -22,7 +22,7 @@ function updateCalendar(date) {
         highlight = since[today.getDay()],
         weeks = Math.floor(((today - start) / MS_DAY) / 7), // Weeks SINCE start
         rows = document.getElementsByClassName("cal"),
-        temp = rows[weeks + 1], // +1 is because row 0 is header
+        temp = rows[weeks], // +1 is because row 0 is header
         cells;
 
     // Date is out of range of calendar
