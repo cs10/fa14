@@ -21,6 +21,10 @@ function updateCalendar(date) {
         today = date || new Date(),
         highlight = since[today.getDay()],
         weeks = Math.floor(((today - start) / MS_DAY) / 7), // Weeks SINCE start
+		if (highlight[0] === 2) {
+			weeks += 1;
+			// really shitty hack for weekends....
+		}
         rows = document.getElementsByClassName("cal"),
         temp = rows[weeks], // +1 is because row 0 is header
         cells;
