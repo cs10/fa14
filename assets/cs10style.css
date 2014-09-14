@@ -38,7 +38,7 @@ h2 { /* Used for Staff Headings */
 
 .center, .ql { text-align: center; }
 
-.bold {
+.bold, .strong {
     font-weight: bold;
 }
 
