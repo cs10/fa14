@@ -52,7 +52,7 @@ GeraldF = {
     imgSrc: 'Gerald.jpg',
     web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
     //bio: 'DanBio.txt',
-    email: 'fractor@berkeley.edu',
+    email: 'fractor@icsi.berkeley.edu',
     office: '329 Soda' };
 
 // TAs
