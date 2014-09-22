@@ -287,3 +287,79 @@ div.staffimgrow > div {
   font-style: italic;
 }
 /* END .snap */
+
+
+/********************/
+body {
+    background-image: url(images/gobo_watermark.gif); /* watermark */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-attachment: fixed;
+    font-family: 'Helvetica';
+    width: 90%;
+    margin: 2% 5%;
+    padding: 0 .3em .3em .3em;
+}
+.logo {
+    font-size: 2.25em;
+    margin: .1em;
+    text-align: center;
+}
+
+.header {
+    display: inline-block;
+    width: 100%;
+}
+.header, .header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.left {
+    width: 250px;
+}
+.header > .center {
+    min-width: 50px;
+    width: 60%;
+    max-width: 100%;
+}
+.right {
+    text-align: right;
+    min-width: 100px;
+    width: 17%;
+    max-width: 250px;
+}
+/*
+display table-cell auto width
+Specifiy:
+min-width -- presentation / readbility
+width -- size, set smaller than 1/(num items)
+max-width -- set >= 1/(num items) */
+.ql {
+    font-size: 1.1em;
+    text-align: center;
+    display: table-cell;
+}
+h1 {
+    display: block;
+    padding: .3em 1em;
+    font-family: 'VAG Rounded Light';
+    font-size: 1.6em;
+    vertical-align: middle;
+}
+.vcenter {
+    display: table-cell;
+    vertical-align: middle;
+}
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:center;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
