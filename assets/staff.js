@@ -321,10 +321,4 @@ function addLoadEvent(func) {
 // Parameters: a section (HTML 'id') and num of images per row.
 buildGroup('instructors', 1);
 buildGroup('tas', 5);
-buildGroup('readers', 5)
-// buildGroup('tait', 5)
-// buildGroup('las', 5)
-// buildGroup('edx', 5)
-// buildGroup('labdev', 5)
-// buildGroup('snap', 5)
-// buildGroup('bjc', 5)
+buildGroup('readers', 5);
