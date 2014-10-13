@@ -191,7 +191,7 @@ instructors = [ GeraldF ];
 tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
         rachelH, sumerM, StevenT, victoriaS];
 
-readers = [ alexM, brandonC, carlosF, clair
+readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
 
 // If you need to add a new SECTION add it to this object.
 // Follow the same format.
