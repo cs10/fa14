@@ -197,14 +197,8 @@ readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
 // Follow the same format.
 all = {
     instructors: instructors,
-    las: las,
     readers: readers,
-    tas: tas,
-    tait: tait,
-    edx: edx,
-    snap: snap,
-    labdev: labdev,
-    bjc: bjc
+    tas: tas
 };
 
 // Prepend TAiT to names, except for Readers.
