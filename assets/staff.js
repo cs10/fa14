@@ -201,17 +201,6 @@ all = {
     tas: tas
 };
 
-// Prepend TAiT to names, except for Readers.
-for (var i = 0; i < tait.length; i++) {
-    if (tait[i].constructor === String) {
-        tait[i] = baseObj(tait[i]);
-    }
-
-    if (tait[i].name.indexOf('Reader') === -1) {
-        tait[i].name = 'TAiT ' + tait[i].name;
-    }
-}
-
 /*****************************************************************************/
 /* DATA POPULATION FUNCTIONS  */
 /*****************************************************************************/
@@ -237,11 +226,6 @@ function buildPerson(data, width) {
         data = baseObj(data);
     }
 
-    // If there's no image, use 3D Alanzo
-    if (!data.imgSrc || LIST_OF_SHAME.indexOf(data.imgSrc) !== -1) {
-        data.imgSrc = '../NPY3D.jpg';
-        data.img    = '';
-    }
     // Create a table element with this person's data, setting a class for width
     var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
