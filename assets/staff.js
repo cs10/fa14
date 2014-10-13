@@ -182,54 +182,6 @@ jobelV = {
     imgSrc: 'JobelVecino.jpg' };
 
 
-
-// Staff
-
-// edX
-KunalMarwaha = {
-    name: 'edX Team Lead Kunal Marwaha',
-    img: 'Sp14/KunalMarwaha.jpg',
-    imgSrc: 'KunalMarwaha.jpg' };
-
-// snap
-KyleZentner = {
-    name: 'Snap! Team Lead Kyle Zentner',
-    img: 'Sp14/KyleZentner.jpg',
-    imgSrc: 'KyleZentner.jpg' };
-
-// Lab Assistants
-// TAiT -- TAiT is auto added
-oliverO = { name: 'Oliver O"Donnell',
-    img: 'Sp14/OliverODonnell.jpg',
-    imgSrc: 'OliverODonnell.jpg',
-    bio: 'Oliver ODonnell.txt' };
-
-carenT = { name: 'Caren Thomas',
-    img: 'Sp14/CarenThomas.jpg',
-    imgSrc: 'CarenThomas.jpg',
-    bio: 'CarenThomasBio.txt' };
-
-benC = {
-    name: 'Ben Carvalho',
-    img: 'Fa13/BenCarvalho.jpg',
-    imgSrc: 'BenCarvalho.jpg',
-    bio: 'BenjaminCarvalhoBio.txt' };
-
-// Lab Dev
-paulI = { name: 'Paul Irwin',
-    img: 'Fa13/PaulIrwin.jpg',
-    imgSrc: 'PaulIrwin.jpg' };
-
-jessicaA = { name: 'Jessica Andrich',
-    img: 'Fa13/JessicaAndrich.jpg',
-    imgSrc: 'JessicaAndrich.jpg' };
-
-// Snap
-JocelynTakahashi = {
-    name: 'Jocelyn Takahashi',
-    img: 'Sp13/JocelynTakahashi.jpg',
-    imgSrc: '../Sp13/t/JocelynTakahashi.jpg' };
-
 /*****************************************************************************/
 /** LIST DEFINITIONS **/
 /*****************************************************************************/
@@ -241,168 +193,13 @@ tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, jaclynB, jannaG, josephC, je
 
 readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
 
-las = [ 'Adam Brown',
-        'Alex Freeman',
-        'Alison Tang',
-        'Amruta Yelamanchili',
-        'Amy Shu',
-        'Brooke Tencer',
-        'Bryce Smith',
-        'Caroline Chan',
-        'Charles Thorson',
-        'Fangzhou Chen',
-        'Franklin Lee',
-        'Gurubala Kotta',
-        'Harris Quraishi',
-        'Helen Hu',
-        'Itzel Martinez',
-        'Jiawei Will Jiang',
-        'Ji Jun Chen',
-        'Joel Terry',
-        'Kalon Cheung',
-        'Kyla Sorin',
-        'Liuxiao Zhang',
-        'Maria Can',
-        'Mateo O Marin',
-        'Michelle Han',
-        'Mohan Ganesan',
-        'Mona Lee',
-        'Navsharan Singh',
-        'Nicholas Dill',
-        'Nick Rose',
-        'Priscilla Bermudez',
-        'Ryan Riddle',
-        'Steven Holman',
-        'Tammy Chen',
-        'Tierney Henderson',
-        'Victoria Bian',
-        'Victor Solis',
-        'Yibing Chen' ];
-
-tait = [ benC,
-    'Alex McKinney',
-    'Brandon Chen',
-    'Carlos Flores',
-    carenT,
-    'Christopher Kilian',
-    'Derek Chiu',
-    'Edwan Hernandez',
-    'Hunter Brown',
-    'Jeffrey Jacinto',
-    'Jobel Vecino',
-    'Josh Perline',
-    'Kalley Thompson',
-    'Kwan Cheung',
-    'Luke Dodds',
-    'Michelle Tsai',
-    'Nolan Takeshita',
-    oliverO,
-    'Rafayel Mkrtchyan',
-    'Saagar Bakshi',
-    'Sean Scofield',
-    'Sulaiman Haruna',
-    'Veersuvrat Rajpal' ];
-
-labdev = [  LaurenMock, jessicaA, paulI, andyS ];
-
-edx = [ KunalMarwaha,
-        LaurenMock,
-        josephC,
-        'Sean Scofield',
-        'Akhila Raju',
-        'Alex Chao',
-        'Harsh Mujoo',
-        'Josh Perline',
-        'Kevin Chen',
-        'Manisha Sharma',
-        'Mrindula Dilip',
-        'Nick Rose',
-        'Nidhi Swamy',
-        'Patrick Lu',
-        'Rebecca Kuan',
-        'Saeam Kwon',
-        'Sneha Dilip',
-        songS,
-        'Sophie Cooper',
-        'Stephen Shan'  ];
-
-snap = [ KunalMarwaha,
-         KyleZentner,
-         'Aaron Yuan',
-         'Andy Cheon',
-         'Angela So',
-         'Ashkan Hosseini',
-         'Brandon Chen',
-         'Carlos Flores',
-         'Dibyo Majundar',
-         'Elizabeth Stella Walla',
-         'Farzin Jahani',
-         'Gilbert Ghang',
-         'Irene Lee',
-         'Janet Chu',
-         'Jesar Shah',
-         'Jisoo Han',
-         'Joanne Xu',
-         JocelynTakahashi,
-         'Joey Barreto',
-         'Kyle Hotchkiss',
-         'Lingtian Cheng',
-         'Michelle Han',
-         'Mohan Ganesan',
-         'Natasha Sandy',
-         'Randy Wei',
-         'Sara Seacat',
-         'Tanisha Singh',
-         'Tanvi Kamath',
-         'Yuan Yuan' ];
-
-bjc = [ LaurenMock, michaelB, KunalMarwaha,  KyleZentner, 'Omoju Miller' ];
-
-
 // If you need to add a new SECTION add it to this object.
 // Follow the same format.
 all = {
     instructors: instructors,
-    las: las,
     readers: readers,
-    tas: tas,
-    tait: tait,
-    edx: edx,
-    snap: snap,
-    labdev: labdev,
-    bjc: bjc
+    tas: tas
 };
-
-LIST_OF_SHAME = [
-'AngelaSo.jpg',
-'HarshMujoo.jpg',
-'HunterBrown.jpg',
-'IreneLee.jpg',
-'JesarShah.jpg',
-'JiJunChen.jpg',
-'JisooHan.jpg',
-'MichelleHan.jpg',
-'NavsharanSingh.jpg',
-'NicholasDill.jpg',
-'OmojuMiller.jpg',
-'PriscillaBermudez.jpg',
-'RebeccaKuan.jpg',
-'SamyHajal.jpg',
-'SerenaChan.jpg',
-'StephenShan.jpg',
-'StevenHolman.jpg',
-'VictorSolis.jpg' ];
-
-// Prepend TAiT to names, except for Readers.
-for (var i = 0; i < tait.length; i++) {
-    if (tait[i].constructor === String) {
-        tait[i] = baseObj(tait[i]);
-    }
-
-    if (tait[i].name.indexOf('Reader') === -1) {
-        tait[i].name = 'TAiT ' + tait[i].name;
-    }
-}
 
 /*****************************************************************************/
 /* DATA POPULATION FUNCTIONS  */
@@ -429,11 +226,6 @@ function buildPerson(data, width) {
         data = baseObj(data);
     }
 
-    // If there's no image, use 3D Alanzo
-    if (!data.imgSrc || LIST_OF_SHAME.indexOf(data.imgSrc) !== -1) {
-        data.imgSrc = '../NPY3D.jpg';
-        data.img    = '';
-    }
     // Create a table element with this person's data, setting a class for width
     var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
@@ -507,10 +299,4 @@ function addLoadEvent(func) {
 // Parameters: a section (HTML 'id') and num of images per row.
 buildGroup('instructors', 1);
 buildGroup('tas', 5);
-buildGroup('readers', 5)
-// buildGroup('tait', 5)
-// buildGroup('las', 5)
-// buildGroup('edx', 5)
-// buildGroup('labdev', 5)
-// buildGroup('snap', 5)
-// buildGroup('bjc', 5)
+buildGroup('readers', 5);
