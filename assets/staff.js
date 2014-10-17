@@ -22,7 +22,7 @@ can be created with simply 'Brandon Chen' as a string in the appropriate lists.
 NOTE: All images must be in the proper folders and match the name, w/o spaces.
 
 You can create any objects like this. REQUIRED ARE: name, img, imgSrc
-'imgSrc' should be a small image in the directory ~/public_html/images/small/ *
+'imgSrc' should be a small image in the directory ~/public_html/resources/images/small/ *
 
 There are a few lists of objects:
 instructors, tas, readers, las -- more can be created if necessary:
@@ -206,7 +206,7 @@ all = {
 /*****************************************************************************/
 
 function imgError(image) {
-    image.src = 'images/NPY3D.jpg';
+    image.src = 'resources/images/NPY3D.jpg';
 }
 
 // Build a basic object for a person from the current semester.
@@ -230,11 +230,11 @@ function buildPerson(data, width) {
     var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
     if (!!data.img) {
-        elm += '<a href="images/' + data.img + '">';
+        elm += '<a href="resources/images/' + data.img + '">';
     }
 
     elm += '<img onerror="imgError(this)" class="staff" align="center" ';
-    elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/';
+    elm += 'alt="' + data.name + '" title="' + data.name + '" src="resources/images/small/';
     elm += data.imgSrc + '" />';
     if (!!data.img) {
         elm += '</a>';
