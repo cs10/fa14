@@ -74,21 +74,34 @@ function updateCalendar(date) {
 }
 
 function displaySpeech(img_name, img_src) {
-    document[img_name].src = img_src
+    document[img_name].src = img_src;
 }
 
 function updateReadings() {
-    var readings = document.getElementsByClassName("reading"), i = 0
+    var readings = document.getElementsByClassName("reading"), i = 0;
     for(; i < readings.length; i++) {
-        readings[i].target = "_blank"
+        readings[i].target = "_blank";
     }
 }
 
 function updateLabs() {
     var urlEnd = "&novideo=true&noreading=true&noassingment=true&course=cs10_fa14.html",
-        links = document.getElementsByClassName("lablink"), i = 0
+        links = document.getElementsByClassName("lablink"), i = 0,
+        // We are not being served from an inst server
+        // (indentified as many domains, cs10.b.e, inst.eecs.b.e, the IP, etc)
+        replace = location.pathname.indexOf('/~cs10/') === -1,
+        // Find the labs/ url to replace
+        // +4 because idexOf returns the position of the l
+        idx = links[0] ? links[0].href.indexOf('labs/') + 4: 0,
+        backupURL = 'http://beautyjoy.github.io/bjc-r/',
+        url = '';
+    
     for(; i < links.length; i++) {
-        links[i].href += urlEnd;
+        url = links[i].href;
+        if (replace && idx !== 0) {
+            url = backupURL + url.slice(idx);
+        }
+        links[i].href = url + urlEnd;
         links[i].style.fontWeight = 700;
         links[i].target = "_blank";
     }
