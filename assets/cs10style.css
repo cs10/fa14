@@ -4,26 +4,26 @@
 @font-face {
   font-family: 'VAG Rounded Light';
   src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot'); /* IE9 Compat Modes */
-  src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff'), /* Modern Browsers */
-       url('fonts/vagrounded/VAGRoundedStd-Light-1.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot?#iefix') format('embedded-opentype'),
+       url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff'),
+       url('fonts/vagrounded/VAGRoundedStd-Light-1.ttf')  format('truetype'),
        url('fonts/vagrounded/VAGRoundedStd-Light-1.svg#1aece233ba5c0b0f2fa745e394cb9f02') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
+/*@font-face {
   font-family: 'VAG Rounded Bold';
-  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot'); /* IE9 Compat Modes */
-  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.woff') format('woff'), /* Modern Browsers */
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.svg#00ad8a10ebd59fb2cc3fe9f97989bf60') format('svg'); /* Legacy iOS */
+  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot');
+  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot?#iefix') format('embedded-opentype'),
+       url('fonts/vagrounded/VAGRoundedStd-Bold-2.woff') format('woff'),
+       url('fonts/vagrounded/VAGRoundedStd-Bold-2.ttf')  format('truetype'),
+       url('fonts/vagrounded/VAGRoundedStd-Bold-2.svg#00ad8a10ebd59fb2cc3fe9f97989bf60') format('svg');
 }
 
-h1, .vagrounded,  {
+.vagrounded,  {
   font-family: 'VAG Rounded Bold';
-}
+} */
 
-h2, .vagrounded-light {
+h1, h2, .vagrounded-light {
   font-family: 'VAG Rounded Light';
 }
 /**********************************
@@ -291,19 +291,21 @@ div.staffimgrow > div {
 
 /********************/
 body {
-    background-image: url(images/gobo_watermark.gif); /* watermark */
+    background-image: url(../resources/images/gobo_watermark.gif);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-attachment: fixed;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica'; /* override bootstrap */
     width: 90%;
     margin: 2% 5%;
     padding: 0 .3em .3em .3em;
 }
 .logo {
-    font-size: 2.25em;
-    margin: .1em;
-    text-align: center;
+  font-family: 'VAG Rounded Light';
+  font-size: 2.25em;
+  margin: .1em;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .header {
