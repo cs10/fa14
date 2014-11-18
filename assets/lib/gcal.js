@@ -39,7 +39,7 @@ var applyAll = fc.applyAll;
 fc.sourceNormalizers.push(function(sourceOptions) {
     if (sourceOptions.dataType == 'gcal' ||
         sourceOptions.dataType === undefined &&
-        (sourceOptions.url || '').match(/^(http|https):\/\/www.googleapis.com\/calendar\/v3\/calendars//)) {
+        (sourceOptions.url || '').match(/^(http|https):\/\/www.googleapis.com\/calendar\/v3\/calendars/) {
             sourceOptions.dataType = 'gcal';
             if (sourceOptions.editable === undefined) {
                 sourceOptions.editable = false;
