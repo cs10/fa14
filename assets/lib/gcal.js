@@ -39,7 +39,7 @@ var applyAll = fc.applyAll;
 fc.sourceNormalizers.push(function(sourceOptions) {
     if (sourceOptions.dataType == 'gcal' ||
         sourceOptions.dataType === undefined &&
-        (sourceOptions.url || '').match(/^(http|https):\/\/www.googleapis.com\/calendar\/v3\/calendars/) {
+        (sourceOptions.url || '').match(/^(http|https):\/\/www.googleapis.com\/calendar\/v3\/calendars\//)) {
             sourceOptions.dataType = 'gcal';
             if (sourceOptions.editable === undefined) {
                 sourceOptions.editable = false;
@@ -80,23 +80,22 @@ function transformOptions(sourceOptions, start, end) {
             var events = [];
             if (data.items) {
                 $.each(data.items, function(i, entry) {
-                    var startStr = entry['gd$when'][0]['startTime'];
-                    var start = parseISO8601(startStr, true);
-                    var end = parseISO8601(entry['gd$when'][0]['endTime'], true);
-                    var allDay = startStr.indexOf('T') == -1;
-                    var url;
-                    $.each(entry.link, function(i, link) {
-                        if (link.type == 'text/html') {
-                            url = link.href;
-                            if (ctz) {
-                                url += (url.indexOf('?') == -1 ? '?' : '&') + 'ctz=' + ctz;
-                            }
-                        }
-                    });
+                    if (entry.status === 'cancelled') {
+                        console.log('found cancelled');
+                        return true;
+                    }
+                    var start = parseISO8601(entry.start.dateTime, true);
+                    var end = parseISO8601(entry.end.dateTime, true);
+                    var allDay = entry.start.dateTime.indexOf('T') == -1;
+                    var url = entry.htmlLink;
+                    if (ctz) {
+                        url += (url.indexOf('?') == -1 ? '?' : '&') + 'ctz=' + ctz;
+                    }
                     if (allDay) {
                         addDays(end, -1); // make inclusive
                     }
-                    events.push({
+                    console.log('adding event');
+                    var evt = {
                         id: entry.id,
                         title: entry.summary,
                         start: entry.start.dateTime || entry.start.date,
@@ -104,15 +103,10 @@ function transformOptions(sourceOptions, start, end) {
                         url: getRoomUrl(entry.htmlLink), // My mod
                         location: entry.location,
                         description: entry.description
-                        // id: entry['gCal$uid']['value'],
-                        // title: entry['title']['$t'],
-                        // url: getRoomUrl(entry['gd$where'][0]['valueString']),
-                        // start: start,
-                        // end: end,
-                        // allDay: allDay,
-                        // location: entry['gd$where'][0]['valueString'],
-                        // description: entry['content']['$t']
-                    });
+                    };
+                    console.log(evt);
+                    events.push(evt);
+                    console.log(events.length);
                 });
             }
             var args = [events].concat(Array.prototype.slice.call(arguments, 1));
