@@ -14,13 +14,10 @@ function getRoomUrl(loc) {
                  Etch: 'etcheverry',
                  Etcheverry: 'etcheverry',
                  Evans: 'evans' },
-        room = "",
-        rm   = loc.split(' ')[1];
+        room = loc.split(' ')[1];
 
-    if (url[rm]) {
-        room = url[rm];
-    } else {
-        room = rm;
+    if (url[room]) {
+        room = url[room];
     }
 
     return base + room;
@@ -56,13 +53,13 @@ fc.sourceFetchers.push(function(sourceOptions, start, end) {
 
 
 function transformOptions(sourceOptions, start, end) {
-
+    s = start
     var success = sourceOptions.success;
     var data = $.extend({}, sourceOptions.data || {}, {
-        'start-min': formatDate(start, 'u'),
-        'start-max': formatDate(end, 'u'),
-        'singleevents': true,
-        'max-results': 9999
+        'timeMin': formatDate(start, 'YYYY-MM-DD[T]HH:mm:ssZ'),
+        'timeMax': formatDate(end, 'YYYY-MM-DD[T]HH:mm:ssZ'),
+        'singlEevents': true,
+        'maxResults': 250
     });
 
     var ctz = sourceOptions.currentTimezone;
@@ -77,12 +74,15 @@ function transformOptions(sourceOptions, start, end) {
         startParam: false,
         endParam: false,
         success: function(data) {
+            console.log('success!');
+            console.log(data);
             var events = [];
             if (data.items) {
                 $.each(data.items, function(i, entry) {
                     if (entry.status === 'cancelled') {
                         return true;
                     }
+                    console.log(start);
                     var start = parseISO8601(entry.start.dateTime, true);
                     var end = parseISO8601(entry.end.dateTime, true);
                     var allDay = entry.start.dateTime.indexOf('T') == -1;
