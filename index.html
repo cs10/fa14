@@ -16,7 +16,7 @@
             background-repeat: no-repeat;
             background-position: bottom right;
             background-attachment: fixed;
-            font-family: 'Helvetica' sans-serif;
+            font-family: 'Helvetica', sans-serif;
             width: 90%;
             margin: 2% 5%;
             padding: 0 .3em .3em .3em;
@@ -204,9 +204,7 @@
         <div class="page-section" id="weekly">
             <h4>This calendar displays the class schedule for the <em>current</em> week.
               Click on any event to see the building location on a map.</h4>
-            <div style="overflow-y: scroll">
-                <div id="oh-cal" style="min-width:800px;"></div>
-            </div>
+            <div id="oh-cal" style="min-width:800px;"></div>
         </div>
 
         <h1>Staff</h1>
@@ -222,31 +220,6 @@
             <h2>Readers</h2>
             <div id="readers"></div>
             <div class='clearfix'></div>
-
-          <!--
-          <h2>TAs-in-Training</h2>
-          <div id="tait"></div>
-          <div class='clearfix'></div>
-
-          <h2>Lab Assistants</h2>
-          <div id="las"></div>
-          <div class='clearfix'></div>
-
-          <h2>edX Course Development</h2>
-          <div id="edx"></div>
-          <div class='clearfix'></div>
-
-          <h2>BJC Lab Development</h2>
-          <div id="labdev"></div>
-          <div class='clearfix'></div>
-
-          <h2><span class='snap'>snap</span> Development</h2>
-          <div id="snap"></div>
-          <div class='clearfix'></div>
-
-          <h2>BJC Project Leads</h2>
-          <div id="bjc"></div>
-          <div class='clearfix'></div> -->
       </div>
       <div class="clearfix"></div>
 
@@ -283,7 +256,6 @@
       <script type='text/javascript' src='assets/lib/jquery.min.js'></script>
       <script type="text/javascript" src="assets/cs10.js"></script>
       <script type="text/javascript">
-          // cs10 = window.cs10 || {};
           function addContent(item) {
               $.ajax({
                   async: true,

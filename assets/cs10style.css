@@ -139,10 +139,9 @@ tr.cal > td:nth-child(2) {
 /* READING ASSIGNMENTS CLASSES */
 /* Preface all readings links with this. */
 .reading:before {
-    content: "• ";
-    padding: 0 2px 0 0; /* FIXME */
+    content: "\03BB   "; /* Lambda Char Unicode */
     color: black;
-    display: inline-block;
+    display: inline;
     text-decoration: none;
 }
 
@@ -216,7 +215,12 @@ div.inner {
     font-weight: normal;
     word-wrap: break-word;
 }
-
+/* Fix for background opactiy */
+.fc-time-grid-event .fc-bg {
+  background: none;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
 .lecture {
     background-color: #FA8072;
 }
@@ -277,7 +281,7 @@ div.staffimgrow > div {
   text-transform: capitalize;
   font-variant: small-caps;
   font-style: normal;
-  font-family: "Times New Roman", Times, serif; /* FIXME */
+  font-family: 'Cardana', sans-serif;
 }
 
 .snap:after {
