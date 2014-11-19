@@ -299,7 +299,7 @@ body {
     background-attachment: fixed;
     font-family: 'Helvetica'; /* override bootstrap */
     width: 90%;
-    margin: 2% 5%;
+    margin: .5% 5%;
     padding: 0 .3em .3em .3em;
 }
 .logo {
