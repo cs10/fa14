@@ -320,7 +320,8 @@
           // Show weekends when we are close to at least one review session.
           var wkends = inRange(quest) || inRange(midterm) || inRange(final);
 
-          // Google API KEY: AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs
+          // Google API KEY: 
+          var gcalkey = 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs';
           $('#oh-cal').fullCalendar({
             allDaySlot: false,
             slotDuration: "1:00:00",
@@ -334,35 +335,20 @@
             eventSources: [
               {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com',
                   cache: true,
-                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+                  googleCalendarApiKey: gcalkey,
                   className: 'lecture' },
               {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com',
                   cache: true,
-                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+                  googleCalendarApiKey: gcalkey,
                   className: 'lab' },
               {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com',
                   cache: true,
-                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+                  googleCalendarApiKey: gcalkey,
                   className: 'oh' },
               {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com',
                   cache: true,
-                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
-                  className: 'disc' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_21jprgg43p44oq62g94agbumv8@group.calendar.google.com',
-                  cache: false,
-                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
-                  className: 'disc', // FIX FOR BUG WITH LAST 2 DISCUSSIONS
-                  timezoneParam: 'America/Chicago' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng@group.calendar.google.com',
-                  cache: false,
-                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
-                  className: 'lab', // FIX FOR BUG WITH LAST LAB
-                  timezoneParam: 'America/Chicago' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_vtlj909a885kh20chsvjfkddb0@group.calendar.google.com',
-                  cache: false,
-                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
-                  className: 'oh', // FIX FOR BUG WITH LATE OH
-                  timezoneParam: 'America/Chicago' }
+                  googleCalendarApiKey: gcalkey,
+                  className: 'disc' }
             ]
           })
       });

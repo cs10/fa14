@@ -209,21 +209,12 @@ div.inner {
   display: none;
 }
 /* Set text settings for info in each event*/
-/*.fc-event-title,
-.fc-event-location, .fc-event-descrip {
+.fc-event, .fc-event:hover, .ui-widget .fc-event {
     color: #222;
     font-size: .8em;
-    padding: 0 0 0 .5em;
+    padding: 0 0 0 .4em;
     font-weight: normal;
     word-wrap: break-word;
-}
-.fc-agenda-axis {
-    text-align: center !important;
-    font-weight: bold !important;
-}*/
-
-.fc-ltr .fc-time-grid .fc-event-container { /* space on the sides of events for LTR (default) */
-    margin: 0 4px;
 }
 
 .lecture {
