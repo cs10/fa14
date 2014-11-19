@@ -314,7 +314,7 @@
         return Math.floor((new Date() - day) / MS_DAY);
       }
 
-      function inRange(num) { return num >= -7 && num < 1 }
+      function inRange(num) { return num >= -7 && num < 1; }
 
       $(document).ready(function() {
           // Show weekends when we are close to at least one review session.
@@ -350,7 +350,7 @@
                   googleCalendarApiKey: gcalkey,
                   className: 'disc' }
             ]
-          })
+          });
       });
       </script>
       <script type='text/javascript' src='assets/staff.js'></script>
