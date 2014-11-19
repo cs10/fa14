@@ -53,13 +53,18 @@ fc.sourceFetchers.push(function(sourceOptions, start, end) {
 
 
 function transformOptions(sourceOptions, start, end) {
-    s = start
+    var s = formatDate(start, 'YYYY-MM-DD[T]HH:mm:ssZ');
+    console.log(s);
     var success = sourceOptions.success;
     var data = $.extend({}, sourceOptions.data || {}, {
-        'timeMin': formatDate(start, 'YYYY-MM-DD[T]HH:mm:ssZ'),
-        'timeMax': formatDate(end, 'YYYY-MM-DD[T]HH:mm:ssZ'),
-        'singlEevents': true,
-        'maxResults': 250
+        // 'timeMin': formatDate(start, 'YYYY-MM-DD[T]HH:mm:ssZ'),
+        // 'timeMax': formatDate(end, 'YYYY-MM-DD[T]HH:mm:ssZ'),
+        // 'singlEevents': true,
+        // 'maxResults': 250
+        'start-min': formatDate(start, 'YYYY-MM-DD[T]HH:mm:ssZ'),
+        'start-max': formatDate(end, 'YYYY-MM-DD[T]HH:mm:ssZ'),
+        'single-events': true,
+        'max-results': 250
     });
 
     var ctz = sourceOptions.currentTimezone;
