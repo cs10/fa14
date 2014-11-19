@@ -179,14 +179,14 @@
         </div>
         <div class="clearfix"></div>
 
-        <h1>News</h1>
+        <!-- <h1>News</h1>
         <div class="page-section" id="news">
             <h2>Please check this section for important updates!</h2>
             <ul class='lambda'>
                 <li>August 18, 2014: Welcome to CS10!</li>
                 <li>August 29, 2014: Course Syllabus added to the quick links section (right above).</li>
             </ul>
-        </div>
+        </div> -->
 
         <h1>Overview</h1>
         <div class="page-section" id="overview"></div>
@@ -195,10 +195,6 @@
         <h1>Assignment Calendar</h1>
         <div class="page-secton" id="cal-bs"></div>
         <div class="clearfix"></div> -->
-
-        <h1>Assignment Calendar</h1>
-        <div class="page-section" id="cal-bs"></div>
-        <div class="clearfix"></div>
 
         <h1>Assignment Calendar</h1>
         <div class="page-section" id="calendar"></div>
@@ -281,17 +277,14 @@
       </div>
 
       <!--END PAGE CONTENT -->
-      <link href="assets/lib/fullcalendar.css" rel="stylesheet" type="text/css" />
+      <link href="assets/lib/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
       <link href="assets/cs10style.css" rel="stylesheet" type="text/css" />
 
       <script type='text/javascript' src='assets/lib/jquery.min.js'></script>
       <script type="text/javascript" src="assets/cs10.js"></script>
-      <script type="text/javascript" src="assets/calendar.js"></script>``
-      <!-- TODO: Add this back when the new calendar is ready
-      -->
       <script type="text/javascript">
           // cs10 = window.cs10 || {};
-          function addContent(item, fn) {
+          function addContent(item) {
               $.ajax({
                   async: true,
                   cache: true,
@@ -299,22 +292,17 @@
                   url: './includes/' + item + '.html',
                   success: function(content, unused, notused) {
                       $('#' + item).append(content);
-                  },
-                  complete: (fn ? fn : [])
+                  }
               });
           }
           addContent('overview');
-          // TODO: Update calendars when the new one looks right.
-          // Swap the two files
           addContent('calendar');
-          addContent('cal-bs');
           addContent('grading');
       </script>
-      <!-- Latest compiled and minified JavaScript -->
-      <script type='text/javascript' src='assets/lib/bootstrap.min.js'></script>
-      <script type='text/javascript' src='assets/lib/moment.min.js'></script>
-      <script type='text/javascript' src='assets/lib/fullcalendar.min.js'></script>
-      <script type='text/javascript' src='assets/lib/gcal.js'></script>
+      <!-- JS For the Weekly Schedule uses fullcalendar.io -->
+      <script type='text/javascript' src='assets/lib/moment.min.js'></script>=
+      <script type='text/javascript' src='assets/lib/fullcalendar/fullcalendar.min.js'></script>
+      <script type='text/javascript' src='assets/lib/fullcalendar/gcal.js'></script>
       <script>
       // Review session dates
       var quest   = daysUntil(new Date(2014, 10, 1)),
@@ -332,47 +320,49 @@
           // Show weekends when we are close to at least one review session.
           var wkends = inRange(quest) || inRange(midterm) || inRange(final);
 
-          // These options follow the full calendar API.
-          // http://arshaw.com/fullcalendar/docs/agenda/
-          // Google API KEY: events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs
-          
+          // Google API KEY: AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs
           $('#oh-cal').fullCalendar({
             allDaySlot: false,
             slotDuration: "1:00:00",
-            // FIXME -- I don't like this.
             slotEventOverlap: false,
             weekends: wkends,
             defaultView: 'agendaWeek',
             minTime: "09:00:00",
             maxTime: "20:00:00",
             contentHeight: "auto",
-            timezone: 'local',
+            timezone: 'America/LosAngeles',
             eventSources: [
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com',
                   cache: true,
+                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   className: 'lecture' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com',
                   cache: true,
+                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   className: 'lab' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com',
                   cache: true,
+                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   className: 'oh' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com',
                   cache: true,
+                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   className: 'disc' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_21jprgg43p44oq62g94agbumv8@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_21jprgg43p44oq62g94agbumv8@group.calendar.google.com',
                   cache: false,
+                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   className: 'disc', // FIX FOR BUG WITH LAST 2 DISCUSSIONS
                   timezoneParam: 'America/Chicago' },
-              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng@group.calendar.google.com',
                   cache: false,
+                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   className: 'lab', // FIX FOR BUG WITH LAST LAB
-                  // timezoneParam: 'America/Chicago'
-                },
-                {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_vtlj909a885kh20chsvjfkddb0@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
-                    cache: false,
-                    className: 'oh', // FIX FOR BUG WITH LATE OH
-                    timezoneParam: 'America/Chicago' }
+                  timezoneParam: 'America/Chicago' },
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_vtlj909a885kh20chsvjfkddb0@group.calendar.google.com',
+                  cache: false,
+                  googleCalendarApiKey: 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+                  className: 'oh', // FIX FOR BUG WITH LATE OH
+                  timezoneParam: 'America/Chicago' }
             ]
           })
       });

@@ -14,8 +14,8 @@ function getRoomUrl(loc) {
                  VLSB: 'valleylifesciences' },
         room = loc.split(' ')[1];
 
-    if (url[rm]) {
-        room = url[rm];
+    if (url[room]) {
+        room = url[room];
     }
 
     return base + room;
@@ -56,18 +56,16 @@ fc.sourceFetchers.push(function(sourceOptions, start, end, timezone) {
 
 
 function transformOptions(sourceOptions, start, end) {
-    var s = formatDate(start, 'yyyy-mm-mm[T]HH:mm:ssZ');
-    console.log(s);
     var success = sourceOptions.success;
     var data = $.extend({}, sourceOptions.data || {}, {
-        // 'timeMin': formatDate(start, 'yyyy-mm-mm[T]HH:mm:ssZ'),
-        // 'timeMax': formatDate(end, 'yyyy-mm-mm[T]HH:mm:ssZ'),
-        // 'singlEevents': true,
-        // 'maxResults': 250
-        'start-min': formatDate(start, 'yyyy-mm-mm[T]HH:mm:ssZ'),
-        'start-max': formatDate(end, 'yyyy-mm-mm[T]HH:mm:ssZ'),
-        'single-events': true,
-        'max-results': 250
+        'timeMin': start.format('YYYY-MM-DD[T]HH:mm:ssZ'),
+        'timeMax': end.format('YYYY-MM-DD[T]HH:mm:ssZ'),
+        'singlEevents': true,
+        'maxResults': 250
+        // 'start-min': formatDate(start, 'yyyy-mm-mm[T]HH:mm:ssZ'),
+        // 'start-max': formatDate(end, 'yyyy-mm-mm[T]HH:mm:ssZ'),
+        // 'single-events': true,
+        // 'max-results': 250
     });
 
     var ctz = sourceOptions.currentTimezone;
@@ -91,8 +89,8 @@ function transformOptions(sourceOptions, start, end) {
                         return true;
                     }
                     console.log(start);
-                    var start = parseISO8601(entry.start.dateTime, true);
-                    var end = parseISO8601(entry.end.dateTime, true);
+                    var start = entry.start.dateTime;
+                    var end = entry.end.dateTime;
                     var allDay = entry.start.dateTime.indexOf('T') == -1;
                     var url = entry.htmlLink;
                     if (ctz) {
@@ -130,5 +128,3 @@ function transformOptions(sourceOptions, start, end) {
     };
 
 });
-})(jQuery);
-
