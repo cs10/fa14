@@ -3,7 +3,7 @@
  * Docs & License: http://arshaw.com/fullcalendar/
  * (c) 2013 Adam Shaw
  */
- 
+
 
 // Addition to modify links for CS10 calendar.
 function getRoomUrl(loc) {
@@ -12,23 +12,22 @@ function getRoomUrl(loc) {
                  LKS: 'likashing',
                  Soda: 'soda',
                  VLSB: 'valleylifesciences' },
-        room = "",
-        rm   = loc.split(' ')[1];
-        
+        room = loc.split(' ')[1];
+
     if (url[rm]) {
         room = url[rm];
     }
-    
+
     return base + room;
 }
 
 (function(factory) {
-	if (typeof define === 'function' && define.amd) {
-		define([ 'jquery' ], factory);
-	}
-	else {
-		factory(jQuery);
-	}
+    if (typeof define === 'function' && define.amd) {
+        define([ 'jquery' ], factory);
+    }
+    else {
+        factory(jQuery);
+    }
 })(function($) {
 
 
@@ -37,78 +36,99 @@ var applyAll = fc.applyAll;
 
 
 fc.sourceNormalizers.push(function(sourceOptions) {
-	if (sourceOptions.dataType == 'gcal' ||
-		sourceOptions.dataType === undefined &&
-		(sourceOptions.url || '').match(/^(http|https):\/\/www.google.com\/calendar\/feeds\//)) {
-			sourceOptions.dataType = 'gcal';
-			if (sourceOptions.editable === undefined) {
-				sourceOptions.editable = false;
-			}
-		}
+    if (sourceOptions.dataType == 'gcal' ||
+        sourceOptions.dataType === undefined &&
+        (sourceOptions.url || '').match(/^(http|https):\/\/www.googleapis.com\/calendar\/v3\/calendars\//)) {
+            sourceOptions.dataType = 'gcal';
+            if (sourceOptions.editable === undefined) {
+                sourceOptions.editable = false;
+            }
+        }
 });
 
 
 fc.sourceFetchers.push(function(sourceOptions, start, end, timezone) {
-	if (sourceOptions.dataType == 'gcal') {
-		return transformOptions(sourceOptions, start, end, timezone);
-	}
+    if (sourceOptions.dataType == 'gcal') {
+        return transformOptions(sourceOptions, start, end, timezone);
+    }
 });
 
-things = []
-function transformOptions(sourceOptions, start, end, timezone) {
 
-	var success = sourceOptions.success;
-	var data = $.extend({}, sourceOptions.data || {}, {
-		singleevents: true,
-		'max-results': 9999
-	});
 
-	return $.extend({}, sourceOptions, {
-		url: sourceOptions.url.replace(/\/basic$/, '/full') + '?alt=json-in-script&callback=?',
-		dataType: 'jsonp',
-		data: data,
-		timezoneParam: 'ctz',
-		startParam: 'start-min',
-		endParam: 'start-max',
-		success: function(data) {
-			console.log('SUCCESS');
-			if (data.feed.title.$t === 'CS10 Fall 14 Labs') {
-				console.log('LABS');
-				console.log(data);
-				things.push(data.feed.entry)
-			}
-			var events = [];
-			if (data.feed.entry) {
-				$.each(data.feed.entry, function(i, entry) {
-					events.push({
-						id: entry.gCal$uid.value,
-						title: entry.title.$t,
-						start: entry.gd$when[0].startTime,
-						end: entry.gd$when[0].endTime,
-						url: getRoomUrl(entry.gd$where[0].valueString),
-						location: entry.gd$where[0].valueString,
-						description: entry.gd$where[0].valueString
-					});
-					console.log(entry.gd$where[0].valueString);
+function transformOptions(sourceOptions, start, end) {
+    var s = formatDate(start, 'yyyy-mm-mm[T]HH:mm:ssZ');
+    console.log(s);
+    var success = sourceOptions.success;
+    var data = $.extend({}, sourceOptions.data || {}, {
+        // 'timeMin': formatDate(start, 'yyyy-mm-mm[T]HH:mm:ssZ'),
+        // 'timeMax': formatDate(end, 'yyyy-mm-mm[T]HH:mm:ssZ'),
+        // 'singlEevents': true,
+        // 'maxResults': 250
+        'start-min': formatDate(start, 'yyyy-mm-mm[T]HH:mm:ssZ'),
+        'start-max': formatDate(end, 'yyyy-mm-mm[T]HH:mm:ssZ'),
+        'single-events': true,
+        'max-results': 250
+    });
 
-				});
-			}
-			var args = [events].concat(Array.prototype.slice.call(arguments, 1));
-			var res = applyAll(success, this, args);
-			if ($.isArray(res)) {
-				return res;
-			}
-			return events;
-		}
-	});
-	
+    var ctz = sourceOptions.currentTimezone;
+    if (ctz) {
+        data.ctz = ctz = ctz.replace(' ', '_');
+    }
+
+    return $.extend({}, sourceOptions, {
+        url: sourceOptions.url + '&callback=?',
+        dataType: 'jsonp',
+        data: data,
+        startParam: false,
+        endParam: false,
+        success: function(data) {
+            console.log('success!');
+            console.log(data);
+            var events = [];
+            if (data.items) {
+                $.each(data.items, function(i, entry) {
+                    if (entry.status === 'cancelled') {
+                        return true;
+                    }
+                    console.log(start);
+                    var start = parseISO8601(entry.start.dateTime, true);
+                    var end = parseISO8601(entry.end.dateTime, true);
+                    var allDay = entry.start.dateTime.indexOf('T') == -1;
+                    var url = entry.htmlLink;
+                    if (ctz) {
+                        url += (url.indexOf('?') == -1 ? '?' : '&') + 'ctz=' + ctz;
+                    }
+                    if (allDay) {
+                        addDays(end, -1); // make inclusive
+                    }
+                    events.push({
+                        id: entry.id,
+                        title: entry.summary,
+                        start: entry.start.dateTime || entry.start.date,
+                        end: entry.end.dateTime || entry.end.date,
+                        url: getRoomUrl(entry.htmlLink), // My mod
+                        location: entry.location,
+                        description: entry.description
+                    });
+                });
+            }
+            var args = [events].concat(Array.prototype.slice.call(arguments, 1));
+            var res = applyAll(success, this, args);
+            if ($.isArray(res)) {
+                return res;
+            }
+            return events;
+        }
+    });
+
 }
 
 
-// legacy
-fc.gcalFeed = function(url, sourceOptions) {
-	return $.extend({}, sourceOptions, { url: url, dataType: 'gcal' });
-};
-
+    // legacy
+    fc.gcalFeed = function(url, sourceOptions) {
+        return $.extend({}, sourceOptions, { url: url, dataType: 'gcal' });
+    };
 
 });
+})(jQuery);
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html>
     <head>
         <title>CS10 | Fall 2014</title>
@@ -12,21 +12,24 @@
 
         <style type="text/css">
         body {
-            background-image: url(images/gobo_watermark.gif); /* watermark */
+            background-image: url(resources/images/gobo_watermark.gif); /* watermark */
             background-repeat: no-repeat;
             background-position: bottom right;
             background-attachment: fixed;
-            font-family: 'Helvetica';
+            font-family: 'Helvetica' sans-serif;
             width: 90%;
             margin: 2% 5%;
             padding: 0 .3em .3em .3em;
         }
         .logo {
+            font-family: 'VAG Rounded Light';
             font-size: 2.25em;
             margin: .1em;
             text-align: center;
         }
-
+        img {
+          max-width: 100%;
+        }
         .header {
             display: inline-block;
             width: 100%;
@@ -70,7 +73,7 @@
             background: -o-linear-gradient(top,  #003A70 q%,#3f7dc2 50%,#003A70 100%); /* Opera 11.10+ */
             background: -ms-linear-gradient(top,  #003A70 0%,#3f7dc2 50%,#003A70 100%); /* IE10+ */
             background: linear-gradient(to bottom,  #003A70 0%,#3f7dc2 50%,#003A70 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003A70', endColorstr='#003A70',GradientType=0 ); /* IE6-9 */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003A70', endColorstr='#003A70', GradientType=0); /* IE6-9 */
             border-radius: 2em;
             box-shadow: 2px 3px 6px #606060;
             padding: .3em 1em;
@@ -83,8 +86,7 @@
         .vcenter {
             display: table-cell;
             vertical-align: middle;
-/*            float: none;
-*/        }
+        }
             /* centered columns styles */
             .row-centered {
                 text-align:center;
@@ -98,6 +100,16 @@
                 margin-right:-4px;
             }
         </style>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-47210910-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
     </head>
 
     <body>
@@ -105,24 +117,24 @@
             <div class="row row-centered" style="width:100%">
                 <div class="col-md-3">
                     <div class="vcenter">
-                        <img width="250" border="0" align="bottom" height="244" src="images/snap_nav.gif" class="navbar" alt="Your Navigation Bar didn't load." title="Click me to navigate." usemap="#gobo">
+                        <img width="250" border="0" align="bottom" height="244" src="resources/images/snap_nav.gif" class="navbar" alt="Your Navigation Bar didn't load." title="Click me to navigate." usemap="#gobo">
                         <div style="position:absolute;top:60px;left:220px;z-index:40;">
-                            <img src="images/blank.gif" name="speech" />
+                            <img src="resources/images/blank.gif" name="speech" />
                         </div>
                         <map name="gobo">
-                            <area shape="rect" coords="0,70,110,97" alt="Overview" href="#overview" onmouseover="displaySpeech('speech', 'images/overview_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                            <area shape="rect" coords="0,97,76,124" alt="News" href="#news" onmouseover="displaySpeech('speech', 'images/news_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                            <area shape="rect" coords="0,124,105,151" alt="Calendar" href="#calendar" onmouseover="displaySpeech('speech', 'images/calendar_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                            <area shape="rect" coords="0,151,72,178" alt="Staff" href="#staff" onmouseover="displaySpeech('speech', 'images/staff_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                            <area shape="rect" coords="0,178,97,205" alt="Grades" href="#grading" onmouseover="displaySpeech('speech', 'images/grading_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
-                            <area shape="rect" coords="0,205,117,232" alt="Resources" href="#resources" onmouseover="displaySpeech('speech', 'images/resources_jump.gif')" onmouseout="displaySpeech('speech', 'images/blank.gif')">
+                            <area shape="rect" coords="0,70,110,97" alt="Overview" href="#overview" onmouseover="displaySpeech('speech', 'resources/images/overview_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,97,76,124" alt="News" href="#news" onmouseover="displaySpeech('speech', 'resources/images/news_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,124,105,151" alt="Calendar" href="#calendar" onmouseover="displaySpeech('speech', 'resources/images/calendar_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,151,72,178" alt="Staff" href="#staff" onmouseover="displaySpeech('speech', 'resources/images/staff_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,178,97,205" alt="Grades" href="#grading" onmouseover="displaySpeech('speech', 'resources/images/grading_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
+                            <area shape="rect" coords="0,205,117,232" alt="Resources" href="#resources" onmouseover="displaySpeech('speech', 'resources/images/resources_jump.gif')" onmouseout="displaySpeech('speech', 'resources/images/blank.gif')">
                         </map>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="col-centered vagrounded-light vcenter">
+                    <div class="col-centered vcenter">
                         <br /><br /><br />
-                        <h2 class="logo">CS10 | Fall 2014</h2>
+                        <h2 class="logo">CS10: BJC | Fall 2014</h2>
                         <h2 class="logo">The Beauty &amp; Joy of Computing</h2>
                     </div>
                 </div>
@@ -130,7 +142,7 @@
                     <div class="vcenter right">
                         <br /><br />
                         <a href="http://bjc.berkeley.edu/">
-                            <img border="0" src="images/bjc186.png" alt="BJC logo">
+                            <img border="0" src="resources/images/bjc186.png" alt="BJC logo">
                         </a>
                     </div>
                 </div>
@@ -150,7 +162,7 @@
                 </div>
                 <div class="ql col-md-2">
                     <!-- UPDATE EACH SEMESTER -->
-                    <a href="../labs/course/cs10_sp14.html">Labs</a>
+                    <a class="lablink" href="../labs/course/cs10_fa14.html?">Labs</a>
                 </div>
                 <div class="ql col-md-2">
                     <!-- UPDATE EACH SEMESTER -->
@@ -158,12 +170,10 @@
                     <br />(assignments)
                 </div>
                 <div class="ql col-md-2">
-                  <a href="https://bcourses.berkeley.edu/courses/1246916/external_tools/32692">Webcasts</a>
+                  <a href="http://webcast.berkeley.edu/playlist#c,s,Fall_2014,-XXv-cvA_iCajFbSJ4q3ApmKtT7RL3wQ">Webcasts</a>
                 </div>
                 <div class="ql col-md-2">
-                    Course Policies
-                    <br />(Coming Soon!)
-                  <!-- <a href="FIXME">Course Policies</a> -->
+                  <a href="assign.html?https://docs.google.com/document/d/1qb86D3sLcusFrx4Feu86Yhu9whw-M28feeUo3Zfaapc/pub">Course Policies</a>
                 </div>
             </div>
         </div>
@@ -174,6 +184,7 @@
             <h2>Please check this section for important updates!</h2>
             <ul class='lambda'>
                 <li>August 18, 2014: Welcome to CS10!</li>
+                <li>August 29, 2014: Course Syllabus added to the quick links section (right above).</li>
             </ul>
         </div>
 
@@ -183,13 +194,12 @@
         <!--
         <h1>Assignment Calendar</h1>
         <div class="page-secton" id="cal-bs"></div>
-        -->
-        <div class="clearfix"></div>
+        <div class="clearfix"></div> -->
 
         <h1>Assignment Calendar</h1>
         <div class="page-section" id="cal-bs"></div>
         <div class="clearfix"></div>
-        
+
         <h1>Assignment Calendar</h1>
         <div class="page-section" id="calendar"></div>
         <div class="clearfix"></div>
@@ -198,8 +208,8 @@
         <div class="page-section" id="weekly">
             <h4>This calendar displays the class schedule for the <em>current</em> week.
               Click on any event to see the building location on a map.</h4>
-            <div class="page-section" style="overflow-y: scroll">
-                <div id="oh-cal" style="min-width:768px;"></div>
+            <div style="overflow-y: scroll">
+                <div id="oh-cal" style="min-width:800px;"></div>
             </div>
         </div>
 
@@ -269,6 +279,7 @@
               <img align="right" alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" />
           </a>
       </div>
+
       <!--END PAGE CONTENT -->
       <link href="assets/lib/fullcalendar.css" rel="stylesheet" type="text/css" />
       <link href="assets/cs10style.css" rel="stylesheet" type="text/css" />
@@ -323,6 +334,8 @@
 
           // These options follow the full calendar API.
           // http://arshaw.com/fullcalendar/docs/agenda/
+          // Google API KEY: events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs
+          
           $('#oh-cal').fullCalendar({
             allDaySlot: false,
             slotDuration: "1:00:00",
@@ -335,42 +348,34 @@
             contentHeight: "auto",
             timezone: 'local',
             eventSources: [
-              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk%40group.calendar.google.com/public/basic',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_7qpoo4ph13p55e4ukmnpvqusdk@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   cache: true,
                   className: 'lecture' },
-              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_d358eocqj23pak3atie23vk35o%40group.calendar.google.com/public/basic',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_d358eocqj23pak3atie23vk35o@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   cache: true,
                   className: 'lab' },
-              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0%40group.calendar.google.com/public/basic',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_k2g60q1sehd2u0ujd257jqm7h0@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   cache: true,
                   className: 'oh' },
-              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_1g3duo9lb53vu09orjictriud4%40group.calendar.google.com/public/basic',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_1g3duo9lb53vu09orjictriud4@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   cache: true,
                   className: 'disc' },
-              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_21jprgg43p44oq62g94agbumv8%40group.calendar.google.com/public/basic',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_21jprgg43p44oq62g94agbumv8@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   cache: false,
                   className: 'disc', // FIX FOR BUG WITH LAST 2 DISCUSSIONS
                   timezoneParam: 'America/Chicago' },
-              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng%40group.calendar.google.com/public/basic',
+              {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_kte6c7s6dbmqjhaan64rn2mnng@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
                   cache: false,
                   className: 'lab', // FIX FOR BUG WITH LAST LAB
                   // timezoneParam: 'America/Chicago'
                 },
-              {   url: 'https://www.google.com/calendar/feeds/berkeley.edu_vtlj909a885kh20chsvjfkddb0%40group.calendar.google.com/public/basic',
-                  cache: false,
-                  className: 'oh', // FIX FOR BUG WITH LATE OH
-                  timezoneParam: 'America/Chicago' }
+                {   url: 'https://www.googleapis.com/calendar/v3/calendars/berkeley.edu_vtlj909a885kh20chsvjfkddb0@group.calendar.google.com/events?key=AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs',
+                    cache: false,
+                    className: 'oh', // FIX FOR BUG WITH LATE OH
+                    timezoneParam: 'America/Chicago' }
             ]
           })
       });
-
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-47210910-1', 'berkeley.edu');
-        ga('send', 'pageview');
       </script>
       <script type='text/javascript' src='assets/staff.js'></script>
     </body>

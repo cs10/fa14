@@ -4,26 +4,26 @@
 @font-face {
   font-family: 'VAG Rounded Light';
   src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot'); /* IE9 Compat Modes */
-  src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff'), /* Modern Browsers */
-       url('fonts/vagrounded/VAGRoundedStd-Light-1.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('fonts/vagrounded/VAGRoundedStd-Light-1.eot?#iefix') format('embedded-opentype'),
+       url('fonts/vagrounded/VAGRoundedStd-Light-1.woff') format('woff'),
+       url('fonts/vagrounded/VAGRoundedStd-Light-1.ttf')  format('truetype'),
        url('fonts/vagrounded/VAGRoundedStd-Light-1.svg#1aece233ba5c0b0f2fa745e394cb9f02') format('svg'); /* Legacy iOS */
 }
 
-@font-face {
+/*@font-face {
   font-family: 'VAG Rounded Bold';
-  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot'); /* IE9 Compat Modes */
-  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.woff') format('woff'), /* Modern Browsers */
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/vagrounded/VAGRoundedStd-Bold-2.svg#00ad8a10ebd59fb2cc3fe9f97989bf60') format('svg'); /* Legacy iOS */
+  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot');
+  src: url('fonts/vagrounded/VAGRoundedStd-Bold-2.eot?#iefix') format('embedded-opentype'),
+       url('fonts/vagrounded/VAGRoundedStd-Bold-2.woff') format('woff'),
+       url('fonts/vagrounded/VAGRoundedStd-Bold-2.ttf')  format('truetype'),
+       url('fonts/vagrounded/VAGRoundedStd-Bold-2.svg#00ad8a10ebd59fb2cc3fe9f97989bf60') format('svg');
 }
 
-h1, .vagrounded,  {
+.vagrounded,  {
   font-family: 'VAG Rounded Bold';
-}
+} */
 
-h2, .vagrounded-light {
+h1, h2, .vagrounded-light {
   font-family: 'VAG Rounded Light';
 }
 /**********************************
@@ -38,7 +38,7 @@ h2 { /* Used for Staff Headings */
 
 .center, .ql { text-align: center; }
 
-.bold {
+.bold, .strong {
     font-weight: bold;
 }
 
@@ -194,13 +194,9 @@ div.inner {
 }
 
 /* WEEKLY CALENDAR */
-#weekly {
-  width: 100%;
-}
-
 /* Increase the default cell height */
 .fc-slats td {
-	height: 3.2em;
+	height: 3.4em;
 }
 
 /* Make today be highlighted in gold. */
@@ -216,8 +212,10 @@ div.inner {
 /*.fc-event-title,
 .fc-event-location, .fc-event-descrip {
     color: #222;
-    font-size: 1em;
+    font-size: .8em;
     padding: 0 0 0 .5em;
+    font-weight: normal;
+    word-wrap: break-word;
 }
 .fc-agenda-axis {
     text-align: center !important;
@@ -261,13 +259,11 @@ img.staff {
 div.staffimgrow {
   width: 100%;
   margin: 0 auto;
-/*  float: center;
-*/  text-align: center;
+  text-align: center;
 }
 
 div.staffimgrow > div {
-/*  float: left;
-*/  text-align: center;
+  text-align: center;
   margin: 0 auto;
   padding: .5em .3em;
   word-wrap: break-word;
@@ -298,3 +294,81 @@ div.staffimgrow > div {
   font-style: italic;
 }
 /* END .snap */
+
+
+/********************/
+body {
+    background-image: url(../resources/images/gobo_watermark.gif);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-attachment: fixed;
+    font-family: 'Helvetica'; /* override bootstrap */
+    width: 90%;
+    margin: 2% 5%;
+    padding: 0 .3em .3em .3em;
+}
+.logo {
+  font-family: 'VAG Rounded Light';
+  font-size: 2.25em;
+  margin: .1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header {
+    display: inline-block;
+    width: 100%;
+}
+.header, .header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.left {
+    width: 250px;
+}
+.header > .center {
+    min-width: 50px;
+    width: 60%;
+    max-width: 100%;
+}
+.right {
+    text-align: right;
+    min-width: 100px;
+    width: 17%;
+    max-width: 250px;
+}
+/*
+display table-cell auto width
+Specifiy:
+min-width -- presentation / readbility
+width -- size, set smaller than 1/(num items)
+max-width -- set >= 1/(num items) */
+.ql {
+    font-size: 1.1em;
+    text-align: center;
+    display: table-cell;
+}
+h1 {
+    display: block;
+    padding: .3em 1em;
+    font-family: 'VAG Rounded Light';
+    font-size: 1.6em;
+    vertical-align: middle;
+}
+.vcenter {
+    display: table-cell;
+    vertical-align: middle;
+}
+    /* centered columns styles */
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:center;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }

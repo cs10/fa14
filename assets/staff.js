@@ -22,7 +22,7 @@ can be created with simply 'Brandon Chen' as a string in the appropriate lists.
 NOTE: All images must be in the proper folders and match the name, w/o spaces.
 
 You can create any objects like this. REQUIRED ARE: name, img, imgSrc
-'imgSrc' should be a small image in the directory ~/public_html/images/small/ *
+'imgSrc' should be a small image in the directory ~/public_html/resources/images/small/ *
 
 There are a few lists of objects:
 instructors, tas, readers, las -- more can be created if necessary:
@@ -52,7 +52,7 @@ GeraldF = {
     imgSrc: 'Gerald.jpg',
     web: 'http://www.cs.berkeley.edu/%7Eddgarcia/',
     //bio: 'DanBio.txt',
-    email: 'fractor@berkeley.edu',
+    email: 'fractor@icsi.berkeley.edu',
     office: '329 Soda' };
 
 // TAs
@@ -119,22 +119,21 @@ jaclynB = {
 andyS   = {
     name: 'TA Andrew Schmitt',
     img: 'Sp14/AndrewSchmitt.jpg',
-    imgSrc: 'AndrewSchmitt.jpg' };
+    imgSrc: 'AndrewSchmitt.jpg',
+    email: 'aschmitt@berkeley.edu'};
 
 LaurenMock = {
     name: 'Head TA Lauren Mock',
     img: 'Sp14/LaurenMock.jpg',
     imgSrc: 'LaurenMock.jpg',
     web: 'http://linkedin.com/in/laurenmock',
-    email: 'lmock@berkeley.edu'
-};
+    email: 'lmock@berkeley.edu' };
 
 adamK = {
     name: 'TA Adam Kuphaldt',
     img: 'Sp14/AdamKuphaldt.jpg',
     imgSrc: 'AdamKuphaldt.jpg',
-    email: '' // TODO
-};
+    email: 'akuphaldt@berkeley.edu' };
 
 AranyU = {
     name: 'TA Arany Uthayakumar',
@@ -162,58 +161,26 @@ claireW = {
     img: 'Fa13/ClaireWatanabe.jpg',
     imgSrc: 'ClaireWatanabe.jpg' };
 
-benC = {
-    name: 'Reader Ben Carvalho',
-    img: 'Fa13/BenCarvalho.jpg',
-    imgSrc: 'BenCarvalho.jpg',
-    bio: 'BenjaminCarvalhoBio.txt' };
-
 brandonC = {
     name: 'Reader Brandon Chen',
     img: 'Sp14/BrandonChen.jpg',
     imgSrc: 'BrandonChen.jpg' };
 
+carlosF = {
+    name: 'Reader Carlos Flores',
+    img: 'Fa13/CarlosFlores.jpg',
+    imgSrc: 'CarlosFlores.jpg' };
 
-// Staff
+alexM = {
+    name: 'Reader Alex McKinney',
+    img: 'Sp14/AlexMcKinney.jpg',
+    imgSrc: 'AlexMcKinney.jpg' };
 
-// edX
-KunalMarwaha = {
-    name: 'edX Team Lead Kunal Marwaha',
-    img: 'Sp14/KunalMarwaha.jpg',
-    imgSrc: 'KunalMarwaha.jpg' };
+jobelV = {
+    name: 'Reader Jobel Vecino',
+    img: 'Fa13/JobelVecino.jpg',
+    imgSrc: 'JobelVecino.jpg' };
 
-// snap
-KyleZentner = {
-    name: 'Snap! Team Lead Kyle Zentner',
-    img: 'Sp14/KyleZentner.jpg',
-    imgSrc: 'KyleZentner.jpg' };
-
-// Lab Assistants
-// TAiT -- TAiT is auto added
-oliverO = { name: 'Oliver O"Donnell',
-    img: 'Sp14/OliverODonnell.jpg',
-    imgSrc: 'OliverODonnell.jpg',
-    bio: 'Oliver ODonnell.txt' };
-
-carenT = { name: 'Caren Thomas',
-    img: 'Sp14/CarenThomas.jpg',
-    imgSrc: 'CarenThomas.jpg',
-    bio: 'CarenThomasBio.txt' };
-
-// Lab Dev
-paulI = { name: 'Paul Irwin',
-    img: 'Fa13/PaulIrwin.jpg',
-    imgSrc: 'PaulIrwin.jpg' };
-
-jessicaA = { name: 'Jessica Andrich',
-    img: 'Fa13/JessicaAndrich.jpg',
-    imgSrc: 'JessicaAndrich.jpg' };
-
-// Snap
-JocelynTakahashi = {
-    name: 'Jocelyn Takahashi',
-    img: 'Sp13/JocelynTakahashi.jpg',
-    imgSrc: '../Sp13/t/JocelynTakahashi.jpg' };
 
 /*****************************************************************************/
 /** LIST DEFINITIONS **/
@@ -224,179 +191,22 @@ instructors = [ GeraldF ];
 tas = [ michaelB, LaurenMock, adamK, andyS, AranyU, jaclynB, jannaG, josephC, jeffreyS, maxD,
         rachelH, sumerM, StevenT, victoriaS];
 
-// readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
-
-readers = [ 'Alex McKinney','Brandon Chen', 'Carlos Flores', 'Claire Watanabe', 'Jobel Vecino']
-
-las = [ 'Adam Brown',
-        'Alex Freeman',
-        'Alison Tang',
-        'Amruta Yelamanchili',
-        'Amy Shu',
-        'Brooke Tencer',
-        'Bryce Smith',
-        'Caroline Chan',
-        'Charles Thorson',
-        'Fangzhou Chen',
-        'Franklin Lee',
-        'Gurubala Kotta',
-        'Harris Quraishi',
-        'Helen Hu',
-        'Itzel Martinez',
-        'Jiawei Will Jiang',
-        'Ji Jun Chen',
-        'Joel Terry',
-        'Kalon Cheung',
-        'Kyla Sorin',
-        'Liuxiao Zhang',
-        'Maria Can',
-        'Mateo O Marin',
-        'Michelle Han',
-        'Mohan Ganesan',
-        'Mona Lee',
-        'Navsharan Singh',
-        'Nicholas Dill',
-        'Nick Rose',
-        'Priscilla Bermudez',
-        'Ryan Riddle',
-        'Steven Holman',
-        'Tammy Chen',
-        'Tierney Henderson',
-        'Victoria Bian',
-        'Victor Solis',
-        'Yibing Chen' ];
-
-tait = [ benC,
-    'Alex McKinney',
-    'Brandon Chen',
-    'Carlos Flores',
-    carenT,
-    'Christopher Kilian',
-    'Derek Chiu',
-    'Edwan Hernandez',
-    'Hunter Brown',
-    'Jeffrey Jacinto',
-    'Jobel Vecino',
-    'Josh Perline',
-    'Kalley Thompson',
-    'Kwan Cheung',
-    'Luke Dodds',
-    'Michelle Tsai',
-    'Nolan Takeshita',
-    oliverO,
-    'Rafayel Mkrtchyan',
-    'Saagar Bakshi',
-    'Sean Scofield',
-    'Sulaiman Haruna',
-    'Veersuvrat Rajpal' ];
-
-labdev = [  LaurenMock, jessicaA, paulI, andyS ];
-
-edx = [ KunalMarwaha,
-        LaurenMock,
-        josephC,
-        'Sean Scofield',
-        'Akhila Raju',
-        'Alex Chao',
-        'Harsh Mujoo',
-        'Josh Perline',
-        'Kevin Chen',
-        'Manisha Sharma',
-        'Mrindula Dilip',
-        'Nick Rose',
-        'Nidhi Swamy',
-        'Patrick Lu',
-        'Rebecca Kuan',
-        'Saeam Kwon',
-        'Sneha Dilip',
-        songS,
-        'Sophie Cooper',
-        'Stephen Shan'  ];
-
-snap = [ KunalMarwaha,
-         KyleZentner,
-         'Aaron Yuan',
-         'Andy Cheon',
-         'Angela So',
-         'Ashkan Hosseini',
-         'Brandon Chen',
-         'Carlos Flores',
-         'Dibyo Majundar',
-         'Elizabeth Stella Walla',
-         'Farzin Jahani',
-         'Gilbert Ghang',
-         'Irene Lee',
-         'Janet Chu',
-         'Jesar Shah',
-         'Jisoo Han',
-         'Joanne Xu',
-         JocelynTakahashi,
-         'Joey Barreto',
-         'Kyle Hotchkiss',
-         'Lingtian Cheng',
-         'Michelle Han',
-         'Mohan Ganesan',
-         'Natasha Sandy',
-         'Randy Wei',
-         'Sara Seacat',
-         'Tanisha Singh',
-         'Tanvi Kamath',
-         'Yuan Yuan' ];
-
-bjc = [ LaurenMock, michaelB, KunalMarwaha,  KyleZentner, 'Omoju Miller' ];
-
+readers = [ alexM, brandonC, carlosF, claireW, jobelV ];
 
 // If you need to add a new SECTION add it to this object.
 // Follow the same format.
 all = {
     instructors: instructors,
-    las: las,
     readers: readers,
-    tas: tas,
-    tait: tait,
-    edx: edx,
-    snap: snap,
-    labdev: labdev,
-    bjc: bjc
+    tas: tas
 };
-
-LIST_OF_SHAME = [
-'AngelaSo.jpg',
-'HarshMujoo.jpg',
-'HunterBrown.jpg',
-'IreneLee.jpg',
-'JesarShah.jpg',
-'JiJunChen.jpg',
-'JisooHan.jpg',
-'MichelleHan.jpg',
-'NavsharanSingh.jpg',
-'NicholasDill.jpg',
-'OmojuMiller.jpg',
-'PriscillaBermudez.jpg',
-'RebeccaKuan.jpg',
-'SamyHajal.jpg',
-'SerenaChan.jpg',
-'StephenShan.jpg',
-'StevenHolman.jpg',
-'VictorSolis.jpg' ];
-
-// Prepend TAiT to names, except for Readers.
-for (var i = 0; i < tait.length; i++) {
-    if (tait[i].constructor === String) {
-        tait[i] = baseObj(tait[i]);
-    }
-
-    if (tait[i].name.indexOf('Reader') === -1) {
-        tait[i].name = 'TAiT ' + tait[i].name;
-    }
-}
 
 /*****************************************************************************/
 /* DATA POPULATION FUNCTIONS  */
 /*****************************************************************************/
 
 function imgError(image) {
-    image.src = 'images/NPY3D.jpg';
+    image.src = 'resources/images/NPY3D.jpg';
 }
 
 // Build a basic object for a person from the current semester.
@@ -416,20 +226,15 @@ function buildPerson(data, width) {
         data = baseObj(data);
     }
 
-    // If there's no image, use 3D Alanzo
-    if (!data.imgSrc || LIST_OF_SHAME.indexOf(data.imgSrc) !== -1) {
-        data.imgSrc = '../NPY3D.jpg';
-        data.img    = '';
-    }
     // Create a table element with this person's data, setting a class for width
     var cls = 'col-md-' + (width === 5 ? '20' : Math.floor(12/width));
     elm = '<div class="'+ cls + '">';
     if (!!data.img) {
-        elm += '<a href="images/' + data.img + '">';
+        elm += '<a href="resources/images/' + data.img + '">';
     }
 
     elm += '<img onerror="imgError(this)" class="staff" align="center" ';
-    elm += 'alt="' + data.name + '" title="' + data.name + '" src="images/small/';
+    elm += 'alt="' + data.name + '" title="' + data.name + '" src="resources/images/small/';
     elm += data.imgSrc + '" />';
     if (!!data.img) {
         elm += '</a>';
@@ -494,10 +299,4 @@ function addLoadEvent(func) {
 // Parameters: a section (HTML 'id') and num of images per row.
 buildGroup('instructors', 1);
 buildGroup('tas', 5);
-buildGroup('readers', 5)
-// buildGroup('tait', 5)
-// buildGroup('las', 5)
-// buildGroup('edx', 5)
-// buildGroup('labdev', 5)
-// buildGroup('snap', 5)
-// buildGroup('bjc', 5)
+buildGroup('readers', 5);
