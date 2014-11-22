@@ -145,7 +145,7 @@ function transformOptions(sourceOptions, start, end, timezone, calendar) {
 						end: entry.end.dateTime || entry.end.date, // same
 						url: getRoomURL(entry.htmlLink), // MY MOD
 						location: entry.location,
-						description: entry.description, // MY MOD
+						description: entry.description, // MY MOD}
                         content: (entry.location + '\n' + entry.description)
 					});
 				});
