@@ -192,14 +192,16 @@ div.inner {
     padding: 2px;
 }
 
+/******************************************************************************/
 /* WEEKLY CALENDAR */
+/* THESE CLASSES ARE BASED ON THE FULLCALENDAR PLUGIN */
+/******************************************************************************/
 /* Increase the default cell height */
 .fc-slats td {
-	height: 3.4em;
+  height: 3.4em;
 }
 
 /* Make today be highlighted in gold. */
-/* This selector is what's used in FC 2.1 source */
 .fc-unthemed .fc-today {
     background: #FD0;
 }
@@ -207,11 +209,15 @@ div.inner {
 .fc-content > .fc-time {
   display: none;
 }
+/* Make the calendar events take up the whole column width */
+.fc-ltr .fc-time-grid .fc-event-container {
+  margin: 0 1% 0 1%;
+}
 /* Set text settings for info in each event*/
 .fc-event, .fc-event:hover, .ui-widget .fc-event {
     color: #222;
-    font-size: .8em;
-    padding: 0 0 0 .4em;
+    font-size: 12px;
+    padding: .2em;
     font-weight: normal;
     word-wrap: break-word;
 }
@@ -240,7 +246,6 @@ div.inner {
 /******************************************************************************/
 /** STAFF PHOTOS **/
 /******************************************************************************/
-
 img.staff {
     border: 4px solid LightBlue;
     border-radius: 4px;
@@ -264,8 +269,7 @@ div.staffimgrow > div {
   word-wrap: break-word;
 }
 
-.yt-vid {
-  /* 16:9 Aspect ratio */
+.yt-vid {   /* 16:9 Aspect ratio */
   max-height: 400px;
   max-width: 711px;
 }

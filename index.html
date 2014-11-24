@@ -29,6 +29,7 @@
         }
         img {
           max-width: 100%;
+          height: auto;
         }
         .header {
             display: inline-block;
@@ -87,18 +88,18 @@
             display: table-cell;
             vertical-align: middle;
         }
-            /* centered columns styles */
-            .row-centered {
-                text-align:center;
-            }
-            .col-centered {
-                display:inline-block;
-                float:none;
-                /* reset the text-align */
-                text-align:center;
-                /* inline-block space fix */
-                margin-right:-4px;
-            }
+        /* centered columns styles */
+        .row-centered {
+            text-align:center;
+        }
+        .col-centered {
+            display:inline-block;
+            float:none;
+            /* reset the text-align */
+            text-align:center;
+            /* inline-block space fix */
+            margin-right:-4px;
+        }
         </style>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -276,14 +277,14 @@
       <script src='assets/lib/fullcalendar/fullcalendar.min.js'></script>
       <script src='assets/lib/fullcalendar/gcal.js'></script>
       <script>
-      // Review session dates
-      var quest   = daysUntil(new Date(2014, 10, 1)),
-          midterm = daysUntil(new Date(2014, 10, 29)),
-          final   = daysUntil(new Date(2014, 12, 16));
+      // Review session dates, JS Dates: 0 == Jan!!
+      var quest   = daysUntil(new Date(2014, 9, 1)),
+          midterm = daysUntil(new Date(2014, 9, 29)),
+          final   = daysUntil(new Date(2014, 11, 16));
 
-      function daysUntil(day) {
+      function daysUntil(from, to) {
         var MS_DAY = 1000*60*60*24;
-        return Math.floor((new Date() - day) / MS_DAY);
+        return Math.floor((from - (to || new Date())) / MS_DAY);
       }
 
       function inRange(num) { return num >= -7 && num < 1; }
@@ -292,7 +293,7 @@
           // Show weekends when we are close to at least one review session.
           var wkends = inRange(quest) || inRange(midterm) || inRange(final);
 
-          // Google API KEY: 
+          // Google API KEY:
           var gcalkey = 'AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs';
           $('#oh-cal').fullCalendar({
             allDaySlot: false,
