@@ -1,5 +1,5 @@
 // Maps days since **saturday** to the appropriate cell numbers
-// It's value is the cell numbers to deal with.
+// Its value is the cell numbers to deal with.
 // The file dynamically calculates days for the semester and doesn't read
 // dates from specific cells.
 var since = [
@@ -19,14 +19,14 @@ function updateCalendar(date) {
     // The SATURDAY before the first week of the calendar.
     var start = new Date(2014, 7, 18),
         today = date || new Date(),
-        highlight = since[today.getDay()],
+        highlight = since[ today.getDay() ],
         weeks = Math.floor(((today - start) / MS_DAY) / 7); // Weeks SINCE start
-	if (highlight[0] === 2) {
-		weeks += 1;
-		// really shitty hack for weekends....
-	}
-	var rows = document.getElementsByClassName("cal"),
-        temp = rows[weeks], // +1 is because row 0 is header
+    // if (highlight[0] === 2) {
+    //     weeks += 1; // really shitty hack for weekends....
+    // }
+
+    var rows = document.getElementsByClassName("cal"),
+        temp = rows[weeks],
         cells;
 
     // Date is out of range of calendar
@@ -92,7 +92,7 @@ function updateLabs() {
         replace = location.pathname.indexOf('/~cs10/') === -1,
         // Find the labs/ url to replace
         // +4 because idexOf returns the position of the l
-        idx = links[0] ? links[0].href.indexOf('labs/') + 4: 0,
+        idx = links[0] ? links[0].href.indexOf('labs/') + 4 : 0,
         backupURL = 'http://beautyjoy.github.io/bjc-r/',
         url = '';
     
